@@ -1,0 +1,74 @@
+body{
+	min-width: 680px;
+	background-color: gray;
+	font-family: "Verdana", Geneva, sans-serif;
+	text-align: left;
+	padding-left: 15%;
+	padding-right: 15%;
+	padding-bottom: 20px;
+	padding-top: 0%;
+	
+}
+
+#altback{
+	background:#855C33 url(../images/flag.jpeg);
+	border: 2px solid #5959FF;
+}
+
+.centered{
+	text-align: center;
+	
+}
+
+div{
+	border: 2px solid white;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	background-color:white;
+	padding-top: 5px;
+	padding-bottom: 20px;
+	padding-left: 100px;
+	padding-right: 100px;
+	
+	
+}
+
+
+img{
+	border-radius: 20px;
+	
+	
+}
+
+h1{
+	font-size: 50px;
+	border: 2px solid SkyBlue;
+	border-top-right-radius: 20px;
+	border-top-left-radius: 20px;
+	padding-left: 100px;
+	padding-right: 100px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 20px;
+	margin-bottom: 0px;
+	background-color:SkyBlue;
+	color:white;
+	
+	
+}
+
+h2{font-size: 20pt;}
+
+h4{
+	color:gray;
+
+}
+
+button{font-size: 20px;}
+
+.mobile{display: none;}
+
+a.sneakylink{color: black; text-decoration: none;}
+
+
+	
