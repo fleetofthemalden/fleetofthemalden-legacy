@@ -1,10 +1,13 @@
 var ProtoId = 81;
 var show = showWorkout;
+var benchString = 'width=350,height=350,left=130,top=5,toolbar=no,scrollbars=no,status=no,resizable=no';
+var workString = 'width=350,height=600,left=30,top=5,toolbar=no,scrollbars=no,status=no,resizable=no';
 var TEST;
 
 function init(){
 	displayQuote();
 	user2k();
+	set_size();
 	event_init();
 }
 
@@ -13,6 +16,15 @@ function event_init(){
 	//Coming Soon!
 }
 
+function set_size(){
+	if (screen.width >= 699) {
+		workString = 'width=600,height=600,left=50,top=20,toolbar=no,scrollbars=no,status=no,resizable=no';
+		benchString = 'width=350,height=350,left=150,top=10,toolbar=no,scrollbars=no,status=no,resizable=no';
+	}
+}
+	
+		
+	
 function user2k(){
 	if(localStorage['2k'] == undefined){
 		localStorage['2k'] = 420;
@@ -27,9 +39,9 @@ function user2k(){
 function showBench() {
  B2k = localStorage['2k'];
  benchWin = window.open(
-  'http://tuftscrew.org/dergs/benchmark_show.php?p='+ProtoId+'&best2k='+B2k,
+  'http://tuftsoarsmen.org/dergs/benchmark_show.php?p='+ProtoId+'&best2k='+B2k,
   'benchWin',
-  'width=600,height=350,left=150,top=20,toolbar=no,scrollbars=no,status=no,resizable=no'
+  benchString
  );
  benchWin.focus();
 }
@@ -37,9 +49,9 @@ function showBench() {
 function showWorkout() {
  B2k = localStorage['2k'];
  benchWin = window.open(
-  'http://tuftscrew.org/dergs/workout_show.php?pid='+ProtoId+'&best2k='+B2k,
+  'http://tuftsoarsmen.org/dergs/workout_show.php?pid='+ProtoId+'&best2k='+B2k,
   'benchWin',
-  'width=600,height=600,left=50,top=20,toolbar=no,scrollbars=no,status=no,resizable=no'
+  workString
  );
  benchWin.focus();
 }
