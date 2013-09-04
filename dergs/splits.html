@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<title>fleet of the malden</title>
+<link rel='shortcut icon' href='http://tuftscrew.org/images/jumbo.ico' type='image/x-icon'>
+<link media="print, screen and (min-device-width: 700px)" href="../css/default_fleet.css" rel="stylesheet" />
+<link media="only screen and (max-device-width: 700px)" href="../css/mobile.css" rel="stylesheet" />
+<script src="../quotes.js"></script>
+<script src="splits.js"></script>
+</head>
+<body onload="init()">
+<h1 id="sm_hdr">ergs</h1>
+<div>
+<br />
+
+<form>
+Select Target 2k: 
+<select id="target2k" onchange="update2k()">
+<OPTION VALUE=360>6:00</OPTION>
+<OPTION VALUE=362>6:02</OPTION>
+<OPTION VALUE=364>6:04</OPTION>
+<OPTION VALUE=366>6:06</OPTION>
+<OPTION VALUE=368>6:08</OPTION>
+<OPTION VALUE=370>6:10</OPTION>
+<OPTION VALUE=372>6:12</OPTION>
+<OPTION VALUE=374>6:14</OPTION>
+<OPTION VALUE=376>6:16</OPTION>
+<OPTION VALUE=378>6:18</OPTION>
+<OPTION VALUE=380>6:20</OPTION>
+<OPTION VALUE=382>6:22</OPTION>
+<OPTION VALUE=384>6:24</OPTION>
+<OPTION VALUE=386>6:26</OPTION>
+<OPTION VALUE=388>6:28</OPTION>
+<OPTION VALUE=390>6:30</OPTION>
+<OPTION VALUE=392>6:32</OPTION>
+<OPTION VALUE=394>6:34</OPTION>
+<OPTION VALUE=396>6:36</OPTION>
+<OPTION VALUE=398>6:38</OPTION>
+<OPTION VALUE=400>6:40</OPTION>
+<OPTION VALUE=402>6:42</OPTION>
+<OPTION VALUE=404>6:44</OPTION>
+<OPTION VALUE=406>6:46</OPTION>
+<OPTION VALUE=408>6:48</OPTION>
+<OPTION VALUE=410>6:50</OPTION>
+<OPTION VALUE=412>6:52</OPTION>
+<OPTION VALUE=414>6:54</OPTION>
+<OPTION VALUE=416>6:56</OPTION>
+<OPTION VALUE=418>6:58</OPTION>
+<OPTION VALUE=420>7:00</OPTION>
+<OPTION VALUE=422>7:02</OPTION>
+<OPTION VALUE=424>7:04</OPTION>
+<OPTION VALUE=426>7:06</OPTION>
+<OPTION VALUE=428>7:08</OPTION>
+<OPTION VALUE=430>7:10</OPTION>
+<OPTION VALUE=432>7:12</OPTION>
+<OPTION VALUE=434>7:14</OPTION>
+<OPTION VALUE=436>7:16</OPTION>
+<OPTION VALUE=438>7:18</OPTION>
+<OPTION VALUE=440>7:20</OPTION>
+<OPTION VALUE=442>7:22</OPTION>
+<OPTION VALUE=444>7:24</OPTION>
+<OPTION VALUE=446>7:26</OPTION>
+<OPTION VALUE=448>7:28</OPTION>
+<OPTION VALUE=450>7:30</OPTION>
+<OPTION VALUE=452>7:32</OPTION>
+<OPTION VALUE=454>7:34</OPTION>
+<OPTION VALUE=456>7:36</OPTION>
+<OPTION VALUE=458>7:38</OPTION>
+<OPTION VALUE=460>7:40</OPTION>
+<OPTION VALUE=462>7:42</OPTION>
+<OPTION VALUE=464>7:44</OPTION>
+<OPTION VALUE=466>7:46</OPTION>
+<OPTION VALUE=468>7:48</OPTION>
+<OPTION VALUE=470>7:50</OPTION>
+<OPTION VALUE=472>7:52</OPTION>
+<OPTION VALUE=474>7:54</OPTION>
+<OPTION VALUE=476>7:56</OPTION>
+<OPTION VALUE=478>7:58</OPTION>
+<OPTION VALUE=480>8:00</OPTION>
+<OPTION VALUE=482>8:02</OPTION>
+<OPTION VALUE=484>8:04</OPTION>
+<OPTION VALUE=486>8:06</OPTION>
+<OPTION VALUE=488>8:08</OPTION>
+<OPTION VALUE=490>8:10</OPTION>
+<OPTION VALUE=492>8:12</OPTION>
+<OPTION VALUE=494>8:14</OPTION>
+<OPTION VALUE=496>8:16</OPTION>
+<OPTION VALUE=498>8:18</OPTION>
+<OPTION VALUE=500>8:20</OPTION>
+<OPTION VALUE=502>8:22</OPTION>
+<OPTION VALUE=504>8:24</OPTION>
+<OPTION VALUE=506>8:26</OPTION>
+<OPTION VALUE=508>8:28</OPTION>
+<OPTION VALUE=510>8:30</OPTION>
+<OPTION VALUE=512>8:32</OPTION>
+<OPTION VALUE=514>8:34</OPTION>
+<OPTION VALUE=516>8:36</OPTION>
+<OPTION VALUE=518>8:38</OPTION>
+<OPTION VALUE=520>8:40</OPTION>
+<OPTION VALUE=522>8:42</OPTION>
+<OPTION VALUE=524>8:44</OPTION>
+<OPTION VALUE=526>8:46</OPTION>
+<OPTION VALUE=528>8:48</OPTION>
+<OPTION VALUE=530>8:50</OPTION>
+<OPTION VALUE=532>8:52</OPTION>
+<OPTION VALUE=534>8:54</OPTION>
+<OPTION VALUE=536>8:56</OPTION>
+<OPTION VALUE=538>8:58</OPTION>
+<OPTION VALUE=540>9:00</OPTION>
+<OPTION VALUE=542>9:02</OPTION>
+<OPTION VALUE=544>9:04</OPTION>
+<OPTION VALUE=546>9:06</OPTION>
+<OPTION VALUE=548>9:08</OPTION>
+<OPTION VALUE=550>9:10</OPTION>
+<OPTION VALUE=552>9:12</OPTION>
+<OPTION VALUE=554>9:14</OPTION>
+<OPTION VALUE=556>9:16</OPTION>
+<OPTION VALUE=558>9:18</OPTION>
+<OPTION VALUE=560>9:20</OPTION>
+<OPTION VALUE=562>9:22</OPTION>
+<OPTION VALUE=564>9:24</OPTION>
+<OPTION VALUE=566>9:26</OPTION>
+<OPTION VALUE=568>9:28</OPTION>
+<OPTION VALUE=570>9:30</OPTION>
+<OPTION VALUE=572>9:32</OPTION>
+<OPTION VALUE=574>9:34</OPTION>
+<OPTION VALUE=576>9:36</OPTION>
+<OPTION VALUE=578>9:38</OPTION>
+<OPTION VALUE=580>9:40</OPTION>
+<OPTION VALUE=582>9:42</OPTION>
+<OPTION VALUE=584>9:44</OPTION>
+<OPTION VALUE=586>9:46</OPTION>
+<OPTION VALUE=588>9:48</OPTION>
+<OPTION VALUE=590>9:50</OPTION>
+<OPTION VALUE=592>9:52</OPTION>
+<OPTION VALUE=594>9:54</OPTION>
+<OPTION VALUE=596>9:56</OPTION>
+<OPTION VALUE=598>9:58</OPTION>
+</select>
+</form>
+
+<form>
+Steady State:<br />
+<select id="steadyState" onchange="selectWorkout('steadyState')">
+	<option value=6969>--&nbsp;SELECT&nbsp;--</option>
+	<option value=81>SS1221 &nbsp;&nbsp;(3 x 1221m R3)@19 [40]</option>
+	<option value=63>SS20 &nbsp;&nbsp;(20:00 R4 @19) [48]</option>
+	<option value=59>SS2500 &nbsp;&nbsp;(500M @80297 R2) [27]</option>
+	<option value=70>SS30 &nbsp;&nbsp;(30:00 R43@19) [73]</option>
+	<option value=1>SSA &nbsp;&nbsp;(3 x 6 @ 680 R3) [42]</option>
+	<option value=2>SSB &nbsp;&nbsp;(4 x 5 @6802 R4) [49]</option>
+	<option value=3>SSC &nbsp;&nbsp;(4 x 3 @6802 R4) [30]</option>
+	<option value=45>SSCP &nbsp;&nbsp;Progressive [93]</option>
+	<option value=4>SSD &nbsp;&nbsp;(4321234 @6802086 R3) [44]</option>
+	<option value=5>SSE &nbsp;&nbsp;(4321 @ 8901 R2) [24]</option>
+	<option value=61>SSEt &nbsp;&nbsp;(4321 @ 6802 R2) [23]</option>
+	<option value=6>SSF5 &nbsp;&nbsp;(3x2K@680 R4 2x2K@86 R2) [104]</option>
+	<option value=7>SSF6 &nbsp;&nbsp;(3x2K@680 R4 3x2K@086 R2)</option>
+	<option value=8>SSF7 &nbsp;&nbsp;(4x2K@6802 R4 3x2K@086 R2)</option>
+	<option value=9>SSF8 &nbsp;&nbsp;(4x2K@6802 R4 4x2K@2086 R2)</option>
+	<option value=10>SSG &nbsp;&nbsp;(5 x 1K @79197 R3) [53]</option>
+	<option value=11>SSH47 &nbsp;&nbsp;543212343212321234 [111]</option>
+	<option value=12>SSH58 &nbsp;&nbsp;543212343212321212321234</option>
+	<option value=13>SSJ12 &nbsp;&nbsp;(5 x 1200M @ 89098) [65]</option>
+	<option value=75>SSJ14 &nbsp;&nbsp;(5 x 1406M @ 89098 R4) [76]</option>
+	<option value=14>SSJ15 &nbsp;&nbsp;(5 x 1500M @ 89098) [81]</option>
+	<option value=15>SSJ16 &nbsp;&nbsp;(5 x 1600M @ 89098) [86]</option>
+	<option value=34>SSK &nbsp;&nbsp;(5 x 1:30 @80297 R0:30) [19]</option>
+	<option value=62>SSKa &nbsp;&nbsp;(5 x 2@80297 R3) [25]</option>
+	<option value=66>SSKb &nbsp;&nbsp;(5 x 3@68097 R3) [35]</option>
+	<option value=64>SSKc &nbsp;&nbsp;(5 x 4@68197 R3) [47]</option>
+	<option value=48>SSL &nbsp;&nbsp;(3 x 5 @ 791 R3) [37]</option>
+	<option value=49>SSM &nbsp;&nbsp;(4x750 @7029 R3) [33]</option>
+	<option value=65>SSMa &nbsp;&nbsp;(4x1000 @7919 R3) [43]</option>
+	<option value=82>SSP21 &nbsp;&nbsp; @ 79197 R3 [25]</option>
+	<option value=84>SSP22 &nbsp;&nbsp;@ 80208 R3 [27]</option>
+	<option value=85>SSP23 &nbsp;&nbsp;@ 91319 R3 [30]</option>
+	<option value=76>SSPow12 &nbsp;&nbsp;10 x (0:40 R0:30 @18) [15]</option>
+	<option value=78>SSPow15 &nbsp;&nbsp;10 x (0:50 R0:30 @18) [19]</option>
+	<option value=79>SSPow18 &nbsp;&nbsp;10 x (1 R0:30 @18) [23]</option>
+</select>
+</form>
+
+<form>
+AT:<br />
+<select id="aThreshold" onchange="selectWorkout('aThreshold')">
+	<option value=6969>--&nbsp;SELECT&nbsp;--</option>
+	<option value=16>AT1 &nbsp;&nbsp;(4321 @0246 R4) [28]</option>
+	<option value=51>AT1221 &nbsp;&nbsp;(3 x 1221m R4)@23 [46]</option>
+	<option value=60>AT1404 &nbsp;&nbsp;(1:40 R1@28)*4 [24]</option>
+	<option value=30>AT2000 &nbsp;&nbsp;(4 x 500M @1470 R4) [26]</option>
+	<option value=52>AT20Min &nbsp;&nbsp;(20:00 R4 @24) [61]</option>
+	<option value=17>AT2500 &nbsp;&nbsp;(5 x 500M @24642 R4) [32]</option>
+	<option value=18>AT33 &nbsp;&nbsp;(6R3) @252 [54]</option>
+	<option value=19>AT34 &nbsp;&nbsp;(6R3) @2552 [73]</option>
+	<option value=20>AT35 &nbsp;&nbsp;(6R3) @25741 [92]</option>
+	<option value=50>AT420 &nbsp;&nbsp;(4:20 @ 3570 R3) [14]</option>
+	<option value=21>AT45 &nbsp;&nbsp;(4R2) @24642 [61]</option>
+	<option value=22>AT46 &nbsp;&nbsp;(4R2) @246642 [74]</option>
+	<option value=23>AT47 &nbsp;&nbsp;(4R2) @2468642 [89]</option>
+	<option value=24>AT48 &nbsp;&nbsp;(4R2) @24687531 [101]</option>
+	<option value=26>AT5K &nbsp;&nbsp;(5K @23 R3) [62]</option>
+	<option value=71>AT5Min &nbsp;&nbsp;(5:00 @27 4R) [17]</option>
+	<option value=25>AT640 &nbsp;&nbsp;[4 x (1:40 R0:30) @2468 R3] [21]</option>
+	<option value=27>AT6K &nbsp;&nbsp;(6K @23 R3) [75]</option>
+	<option value=28>AT7K &nbsp;&nbsp;(7K @23 R3) [87]</option>
+	<option value=29>AT8K &nbsp;&nbsp;(8K @23 R3) [99]</option>
+	<option value=83>ATP24 &nbsp;&nbsp; @ 02420 R3 [20]</option>
+	<option value=86>ATP25 &nbsp;&nbsp;@ 13531 R3 [21]</option>
+	<option value=87>ATP26 &nbsp;&nbsp;@ 24642 R3 [22]</option>
+</select>
+</form>
+
+<form>
+Sprint: <br />
+<select id="transport" onchange="selectWorkout('transport')">
+	<option value=6969>--&nbsp;SELECT&nbsp;--</option>
+	<option value=74>TR1000 &nbsp;&nbsp;[2 x (500M R0:20)@32 R3] [15]</option>
+	<option value=73>TR1500 &nbsp;&nbsp;[3 x (500M R0:30)@32 R4] [23]</option>
+	<option value=72>TR2000 &nbsp;&nbsp;[4 x (500M R0:40)@32  R5] [31]</option>
+	<option value=47>TR2500 &nbsp;&nbsp;[5 x (500M R1)@32 R5] [38]</option>
+	<option value=32>TRa30 &nbsp;&nbsp;(0:30 R0:30 @80208 R2) [9]</option>
+	<option value=33>TRa40 &nbsp;&nbsp;(0:40 R0:30 @4703 R2) [10]</option>
+	<option value=53>TRa50 &nbsp;&nbsp;(0:50 R0:30 @ 7913 R3) [13]</option>
+	<option value=31>TRa60 &nbsp;&nbsp;(1 R0:30 @802 R3) [11]</option>
+	<option value=54>TRb30 &nbsp;&nbsp;(0:30 R0:20 @80208 R2) [9]</option>
+	<option value=55>TRb40 &nbsp;&nbsp;(0:40 R0:20 @4703 R2) [10]</option>
+	<option value=56>TRb50 &nbsp;&nbsp;(0:50 R0:20 @7913 R3) [13]</option>
+	<option value=57>TRb60 &nbsp;&nbsp;(1 R0:20 @802 R3) [11]</option>
+	<option value=58>TRd20 &nbsp;&nbsp;(7 R234324 @32 R5) [28]</option>
+	<option value=46>TRd30 &nbsp;&nbsp;(7 R345435 @32 R5) [28]</option>
+	<option value=88>TRP28 &nbsp;&nbsp;@ 46864 R3 [12]</option>
+	<option value=89>TRP30 &nbsp;&nbsp;@ 68086 R3 [13]</option>
+	<option value=90>TRP32 &nbsp;&nbsp;@ 80208 R3 [14]</option>
+</select>
+</form>
+
+<form>
+Benchmarks:
+<select id="benchmark" onchange="selectWorkout('benchmark')">
+	<option value=6969>SELECT</option>
+	<option value=1>20 sec</option>
+	<option value=2>1 min</option>
+	<option value=3>3 min</option>
+	<option value=4>1000 m</option>
+	<option value=5>1500 m</option>
+	<option value=6>7 min</option>
+	<option value=7>2000 m</option>
+	<option value=8>2114 m</option>
+	<option value=9>3663 m</option>
+	<option value=10>4000 m</option>
+	<option value=11>20 min</option>
+	<option value=12>6000 m</option>
+	<option value=13>30 min</option>
+</select>
+</form>
+
+<button type="button" onclick="show()">Show Workout</button>
+<br />
+<p class="centered">~<br /><I id="quote"></I><br />~</p>
+</div>
+<p class="centered">contact: <a href="mailto:info@fleetofthemalden.com">info@fleetofthemalden.com</a></p><br />
+</body>
+</html>
