@@ -20,5 +20,6 @@ function parse() {
 		}
 		else{
 			wkt = workout[0];
+		}
 	});
 }
