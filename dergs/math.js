@@ -3,6 +3,8 @@ var B2k;
 var params;
 var text;
 
+var test;
+
 function percent2k(rate){
 	return 1.5 - (.25/16)*rate;
 }
@@ -19,6 +21,7 @@ function parse() {
 	$.get(qry, function (workout){
 		if(workout.length == 0){
 			alert("No workout data found");
+			test = workout;
 		}
 		else{
 			wkt = workout[0];
