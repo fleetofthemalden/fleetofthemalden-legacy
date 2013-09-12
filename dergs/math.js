@@ -2,6 +2,7 @@ var wkt;
 var B2k;
 var params;
 var text;
+var qry;
 
 var test;
 
@@ -17,7 +18,7 @@ function parse() {
     params = self.location.search;
     text = params.split('&Best2k=');
     B2k = parseInt(text[1]);
-    var qry = "http://oldv1kenobi.herokuapp.com/ergs.json" + text[0];
+    qry = "http://oldv1kenobi.herokuapp.com/ergs.json" + text[0];
 	$.get(qry, function (workout){
 		if(workout.length == 0){
 			alert("No workout data found");
