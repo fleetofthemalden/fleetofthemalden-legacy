@@ -10,7 +10,7 @@ function splitter(rate){
 }
 
 function parse() {
-    var params = +self.location.search;
+    var params = self.location.search;
     var text = params.split("&Best2k=");
     B2k = parseInt(text[1]);
     var qry = "http://oldv1kenobi.herokuapp.com/ergs.json" + text[0];
