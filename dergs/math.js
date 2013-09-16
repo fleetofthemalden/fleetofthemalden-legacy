@@ -41,7 +41,8 @@ function render(){
 	var intv;
 	var wrate;
 	var wsplit;
-	for(var i=0; i<wkt["Interval"].length(); i++){
+	var len = wkt.Interval.length;
+	for(var i=0; i<len; i++){
 		intv = wkt["Interval"][i];
 		wrate = wkt["Rate"][i];
 		wsplit = splitter(wrate);
