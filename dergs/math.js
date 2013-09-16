@@ -75,6 +75,6 @@ function render(){
 	+ "</SELECT></FORM></td><td>&nbsp;</td><TD><FORM>Reps<br /><SELECT NAME=reps size=4 onchange='update_reps();'>"
 	+ "<OPTION SELECTED>1</OPTION><OPTION>2</OPTION><OPTION>3</OPTION><OPTION>4</OPTION><OPTION>5</OPTION><OPTION>6</OPTION><OPTION>7</OPTION><OPTION>8</OPTION><OPTION>9</OPTION><OPTION>10</OPTION></SELECT></FORM></td></tr></table></TD></TR></TABLE>";
 	
-	$('sterling').append(rendering);
+	$('#sterling').append(rendering);
 }
 	
