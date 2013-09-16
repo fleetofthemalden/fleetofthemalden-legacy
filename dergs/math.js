@@ -67,19 +67,21 @@ function render(){
 		intv = wkt["Interval"][i];
 		wrate = wkt["Rate"][i];
 		wsplit = splitter(parseInt(wrate));
-		rendering = rendering + "<TR id='intv" + i+1 + "'>" 
-		+ if(wrate == "rest"){
-			"<TD class=lrg ></TD>"
+		rendering = rendering + "<TR id='intv" + i+1 + "'>"; 
+		if(wrate == "rest"){
+			rendering = rendering
+			+ "<TD class=lrg ></TD>"
 			+ "<TD class=lrg >" + intv + "</TD>"
 			+ "<TD class=lrg >" + wrate + "</TD>"
-			+ "<TD class=lrg ></TD></TR>"
+			+ "<TD class=lrg ></TD></TR>";
 		}
 		else{
-			"<TD class=lrg >" + intv + "</TD>"
+			rendering = rendering
+			+ "<TD class=lrg >" + intv + "</TD>"
 			+ "<TD class=lrg >" + wrate + "</TD>"
 			+ "<TD class=lrg >" + timify(wsplit) + "</TD>"
-			+ "<TD class=lrg >" + "[placeholder]" + "</TD></TR>"
-		};
+			+ "<TD class=lrg >" + "[placeholder]" + "</TD></TR>";
+		}
 	}
 	rendering = rendering + "</TABLE></TD></TR><TR><TD>&nbsp;</TD></TR><TR><TD><table><tr><td><table>"
 	+ "<TR><TD>Time:" + "[TIME]" + "</TD></TR>"
