@@ -32,25 +32,25 @@ function parse() {
 
 function render(){
 	var type;
-	if(wkt.type == "time"){
+	if(wkt["type"] == "time"){
 		type = "meters"
 	}
 	else{
 		type = "time";
 	}
-	var rendering = "<h5>" + wkt.name + "</h5><TABLE BORDER=1><TR><TD><TABLE BORDER=1><TR id='wkt'><TD class=lrg>Interval</TD><TD class=lrg>Rate</TD><TD class=lrg>Split</TD><TD class=lrg>" + type + "</TD></TR>";
+	var rendering = "<h5>" + wkt["name"] + "</h5><TABLE BORDER=1><TR><TD><TABLE BORDER=1><TR id='wkt'><TD class=lrg>Interval</TD><TD class=lrg>Rate</TD><TD class=lrg>Split</TD><TD class=lrg>" + type + "</TD></TR>";
 	var intv;
 	var wrate;
 	var wsplit;
-	for(var i=0; i<wkt.Interval.length(); i++){
-		intv = wkt.Interval[i];
-		wrate = wkt.Rate[i];
+	for(var i=0; i<wkt["Interval"]length(); i++){
+		intv = wkt["Interval"][i];
+		wrate = wkt["Rate"][i];
 		wsplit = splitter(wrate);
 		rendering = rendering + "<TR id='intv" + i+1 + "'>" 
 		+ "<TD class=lrg >" + intv + "</TD>"
 		+ "<TD class=lrg >" + wrate + "</TD>"
 		+ "<TD class=lrg >" + timify(wsplit) + "</TD>"
-		+ "<TD class=lrg >" + "[placeholder" + "</TD></TR>";
+		+ "<TD class=lrg >" + "[placeholder]" + "</TD></TR>";
 	}
 	rendering = rendering + "</TABLE></TD></TR><TR><TD>&nbsp;</TD></TR><TR><TD><table><tr><td><table>"
 	+ "<TR><TD>Time:" + "[TIME]" + "</TD></TR>"
