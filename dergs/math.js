@@ -47,10 +47,10 @@ function parse() {
 		else{
 			wkt = workout[0];
 			if(wkt.type == "time"){
-				wkt.type = "Meters"
+				wkt.atype = "Meters"
 			}
 			else{
-				wkt.type = "Time";
+				wkt.atype = "Time";
 			}
 			render();
 		}
@@ -58,7 +58,7 @@ function parse() {
 }
 
 function render(){
-	var rendering = "<TABLE BORDER=1><tr><td>" + wkt.name + "</td></tr><TR><TD><TABLE BORDER=1><TR id='wkt'><TD class=lrg>Interval</TD><TD class=lrg>Rate</TD><TD class=lrg>Split</TD><TD class=lrg>" + wkt.type + "</TD></TR>";
+	var rendering = "<TABLE BORDER=1><tr><td>" + wkt.name + "</td></tr><TR><TD><TABLE BORDER=1><TR id='wkt'><TD class=lrg>Interval</TD><TD class=lrg>Rate</TD><TD class=lrg>Split</TD><TD class=lrg>" + wkt.atype + "</TD></TR>";
 	var intv;
 	var wrate;
 	var wsplit;

@@ -56,6 +56,16 @@ function showWorkout() {
  benchWin.focus();
 }
 
+function show2() {
+ B2k = localStorage['2k'];
+ benchWin = window.open(
+  'http://oldv1kenobi.herokuapp.com/?pid='+ProtoId+'&Best2k='+B2k,
+  'benchWin',
+  workString
+ );
+ benchWin.focus();
+}
+
 function update2k(){
 	var y = document.getElementById("target2k");
 	var x = y.selectedIndex;
