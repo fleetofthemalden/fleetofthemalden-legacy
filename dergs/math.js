@@ -12,7 +12,6 @@ function splitter(rate){
 
 function init(){
 	parse();
-	render();
 }
 
 function parse() {
@@ -28,6 +27,7 @@ function parse() {
 			wkt = workout[0];
 		}
 	});
+	render();
 }
 
 function render(){
