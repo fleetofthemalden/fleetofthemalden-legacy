@@ -1,5 +1,5 @@
 var wkt;
-var B2k;
+var B2k = 420;
 
 
 function percent2k(rate){
@@ -17,7 +17,7 @@ function splitter(rate){
 
 function timify(secs){
 	if(secs == 0){
-		return "rest";
+		return "";
 	}
 	else{
 		return Math.floor(secs/60) + ":" + secs%60;
@@ -51,15 +51,15 @@ function parse() {
 }
 
 function render(){
-	var rendering = "<p id='name'>" + wkt["name"] + "</p><TABLE BORDER=1><TR><TD><TABLE BORDER=1><TR id='wkt'><TD class=lrg>Interval</TD><TD class=lrg>Rate</TD><TD class=lrg>Split</TD><TD class=lrg>" + wkt.type + "</TD></TR>";
+	var rendering = "<TABLE BORDER=1><tr><td>" + wkt.name + "</td></tr><TR><TD><TABLE BORDER=1><TR id='wkt'><TD class=lrg>Interval</TD><TD class=lrg>Rate</TD><TD class=lrg>Split</TD><TD class=lrg>" + wkt.type + "</TD></TR>";
 	var intv;
 	var wrate;
 	var wsplit;
 	var len = wkt.Interval.length;
 	for(var i=0; i<len; i++){
 		intv = wkt["Interval"][i];
-		wrate = parseInt(wkt["Rate"][i]);
-		wsplit = splitter(wrate);
+		wrate = wkt["Rate"][i];
+		wsplit = splitter(parseInt(wrate));
 		rendering = rendering + "<TR id='intv" + i+1 + "'>" 
 		+ "<TD class=lrg >" + intv + "</TD>"
 		+ "<TD class=lrg >" + wrate + "</TD>"
