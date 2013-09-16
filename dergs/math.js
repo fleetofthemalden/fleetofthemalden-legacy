@@ -80,7 +80,7 @@ function render(){
 			+ "<TD class=lrg >" + intv + "</TD>"
 			+ "<TD class=lrg >" + wrate + "</TD>"
 			+ "<TD class=lrg >" + timify(wsplit) + "</TD>"
-			+ "<TD class=lrg >" + "[placeholder]" + "</TD></TR>";
+			+ "<TD class=lrg >" + "[pholder]" + "</TD></TR>";
 		}
 	}
 	rendering = rendering + "</TABLE></TD></TR><TR><TD>&nbsp;</TD></TR><TR><TD><table><tr><td><table>"
