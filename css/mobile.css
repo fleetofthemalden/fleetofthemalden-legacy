@@ -10,6 +10,11 @@ body{
 	
 }
 
+.centered{
+	text-align: center;
+	
+}
+
 div{
 	border: 2px solid white;
 	border-bottom-right-radius: 20px;
@@ -28,7 +33,7 @@ div{
 	border-top-left-radius: 20px;
 }
 
-.lrg{
+td.lrg{
 	text-align: center;
 	width: 70px;
 }
