@@ -7,7 +7,7 @@ function percent2k(rate){
 }
 
 function splitter(rate){
-	if(rate == NaN || rate == "rest"){
+	if(rate == NaN){
 		return 0;
 	}
 	else{
@@ -16,7 +16,7 @@ function splitter(rate){
 }
 
 function timify(secs){
-	if(secs == 0){
+	if(secs == 0 | secs == NaN){
 		return "";
 	}
 	else{
