@@ -21,7 +21,7 @@ function timify(secs){
 	}
 	else{
 		var s = secs%60
-		if(s < 10)
+		if(s < 10){
 			s = 0 + s.toString();
 		}
 		else{
