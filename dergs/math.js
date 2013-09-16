@@ -7,7 +7,21 @@ function percent2k(rate){
 }
 
 function splitter(rate){
-	return (B2k/4)*percent2k(rate);
+	if(rate == "rest"){
+		return 0;
+	}
+	else{
+		return (B2k/4)*percent2k(rate);
+	}
+}
+
+function timify(secs){
+	if(secs == 0){
+		return "rest";
+	}
+	else{
+		return Math.floor(secs/60) + ":" + secs%60;
+	}
 }
 
 function init(){
