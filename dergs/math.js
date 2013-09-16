@@ -7,7 +7,7 @@ function percent2k(rate){
 }
 
 function splitter(rate){
-	if(rate == "rest"){
+	if(rate == "NaN" || rate == "rest"){
 		return 0;
 	}
 	else{
@@ -51,14 +51,14 @@ function parse() {
 }
 
 function render(){
-	var rendering = "<h5>" + wkt["name"] + "</h5><TABLE BORDER=1><TR><TD><TABLE BORDER=1><TR id='wkt'><TD class=lrg>Interval</TD><TD class=lrg>Rate</TD><TD class=lrg>Split</TD><TD class=lrg>" + wkt.type + "</TD></TR>";
+	var rendering = "<p id='name'>" + wkt["name"] + "</p><TABLE BORDER=1><TR><TD><TABLE BORDER=1><TR id='wkt'><TD class=lrg>Interval</TD><TD class=lrg>Rate</TD><TD class=lrg>Split</TD><TD class=lrg>" + wkt.type + "</TD></TR>";
 	var intv;
 	var wrate;
 	var wsplit;
 	var len = wkt.Interval.length;
 	for(var i=0; i<len; i++){
 		intv = wkt["Interval"][i];
-		wrate = wkt["Rate"][i];
+		wrate = parseInt(wkt["Rate"][i]);
 		wsplit = splitter(wrate);
 		rendering = rendering + "<TR id='intv" + i+1 + "'>" 
 		+ "<TD class=lrg >" + intv + "</TD>"
