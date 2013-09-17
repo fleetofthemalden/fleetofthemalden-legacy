@@ -47,6 +47,12 @@ td.lrg{
 	width: 70px;
 }
 
+td.rest{
+	text-align: center;
+	width: 80px;
+	font-size: 10pt;
+}
+
 img{
 	border-radius: 20px;
 	

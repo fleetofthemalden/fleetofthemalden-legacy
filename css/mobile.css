@@ -34,8 +34,14 @@ div{
 }
 
 td.lrg{
+	font-size: 60px;
 	text-align: center;
-	width: 70px;
+	width: 80px;
+}
+
+td.rest{
+	text-align: center;
+	width: 80px;
 }
 
 
