@@ -20,7 +20,7 @@ function event_init(){
 function set_size(){
 	if (screen.width >= 699) {
 		workString = 'width=600,height=600,left=50,top=20,toolbar=no,scrollbars=no,status=no,resizable=no';
-		benchString = 'width=350,height=350,left=150,top=10,toolbar=no,scrollbars=no,status=no,resizable=no';
+		benchString = 'width=500,height=350,left=150,top=10,toolbar=no,scrollbars=no,status=no,resizable=no';
 	}
 }
 	
@@ -50,7 +50,7 @@ function showBenchBrian() {
 function showBench() {
  B2k = localStorage['2k'];
  benchWin = window.open(
-  'bench.html?p='+ProtoId+'&Best2k='+B2k,
+  'bench.html?bid='+ProtoId+'&Best2k='+B2k,
   'benchWin',
   benchString
  );

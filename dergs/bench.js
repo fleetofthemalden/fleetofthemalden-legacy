@@ -1,6 +1,6 @@
 var wkt;
 var B2k = 420;
-var p;
+var bid;
 var reps=0;
 var work_it;
 
@@ -49,7 +49,7 @@ function parse() {
     var params = self.location.search;
     var text = params.split('&Best2k=');
     B2k = parseInt(text[1]);
-    p = text[0].split('?')[1];
+    bid = text[0].split('?')[1];
     var qry = "http://oldv1kenobi.herokuapp.com/ergs.json" + text[0];
     TEST = qry;
 	$.get(qry, function (workout){
