@@ -69,7 +69,8 @@ function init(){
 function parse() {
     var params = self.location.search;
     var text = params.split('&');
-    B2k = parseInt(text[1].split('Best2k=')[0]);
+    TEST = text;
+    B2k = parseInt(text[1].split('=')[1]);
     if(B2k == 0){
     	user2k();
     }
