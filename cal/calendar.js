@@ -3,31 +3,9 @@ Feel free to "steal" this code provided that you leave this notice as is.
 Additional examples from the book can be found at http://www.geocities.com/SiliconValley/9000/
 For more information contact Tomer or Yehuda Shiran <yshiran@iil.intel.com>*/
 
-setCal()
-
-function getTime() {
-// initialize time-related variables with current time settings
+var wkts = new Object()
 var now = new Date()
-var hour = now.getHours()
-var minute = now.getMinutes()
-now = null
-var ampm = "" 
 
-// validate hour values and set value of ampm
-if (hour >= 12) {
-hour -= 12
-ampm = "PM"
-} else
-ampm = "AM"
-hour = (hour == 0) ? 12 : hour
-
-// add zero digit to a one digit minute
-if (minute < 10)
-minute = "0" + minute // do not parse this number!
-
-// return time string
-return hour + ":" + minute + " " + ampm
-}
 
 function leapYear(year) {
 if (year % 4 == 0) // basic rule
@@ -78,7 +56,6 @@ return ar[month]
 
 function setCal() {
 // standard time attributes
-var now = new Date()
 var year = now.getYear()
 if (year < 1000)
 year+=1900
@@ -177,12 +154,34 @@ text += '</TABLE>'
 text += '</CENTER>'
 
 // print accumulative HTML string
-$('#cal').append(text);
+$('#caldiv').append(text)
 }
 
 function cell_text(digit){
-	var text = "<ul></ul>"; //stuff goes here
+	var text = "";
+	for(var i=0; i<wkts[digit].length; i++){
+		text+= wkts[digit][i].a + "<br />";
+	}
 	return "<table id='tabd" + digit + "' border=0 width=70 height=50><tr><td id='d" + 
 	digit + "'>" + text + "</td><td>" + digit + "</td></tr></table>";
+}
+
+function getWorkouts(cal){
+	var qry = "http://oldv1kenobi.herokuapp.com/cal.json?month=" + now.getMonth() + "&cal=" + cal;
+	$.get(qry, function (workouts){
+		if(workouts.length == 0){
+			alert("No workout data found");
+		}
+		else{
+			for(var i=1; i<32; i++){
+				wkts[i] = new Array();
+			}
+			for(var i=0; i<workouts.length; i++){
+				var temp = workouts[i];
+				wkts[temp.date].push(temp);
+			}
+		}
+	});
+	setCal();
 }
 	
