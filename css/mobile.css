@@ -40,6 +40,12 @@ td.lrg{
 	font-weight: bold;
 }
 
+td.lrgr{
+	font-size: 60px;
+	text-align: center;
+	width: 80px;
+}
+
 td.rest{
 	text-align: center;
 	width: 80px;

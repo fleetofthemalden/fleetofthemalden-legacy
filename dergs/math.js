@@ -101,7 +101,7 @@ function parse() {
 }
 
 function render(){
-	var rendering = "<table BORDER=0><tr><td>" + wkt.name + "</td></tr><tr><td><table BORDER=1px><tr id='wkt'><td class='lrg'>Interval</td><td class='lrg'>Rate</td><td class='lrg'>&nbsp;Split&nbsp;</td><td class='lrg'>" + wkt.atype + "</td></tr>";
+	var rendering = "<table BORDER=0><tr><td>" + wkt.name + "</td></tr><tr><td><table BORDER=1px><tr id='wkt'><td class='lrgr'>Interval</td><td class='lrgr'>&nbsp;Rate&nbsp;</td><td class='lrgr'>&nbsp;Split&nbsp;</td><td class='lrgr'>&nbsp;" + wkt.atype + "&nbsp;</td></tr>";
 	rendering = rendering + add_reps(1) + "</table></td></tr><tr><td>&nbsp;</td></tr>";
 	tots();
 	rendering = rendering + "<tr><td><table><tr><td><table>"
