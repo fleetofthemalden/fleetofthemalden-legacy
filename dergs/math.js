@@ -68,8 +68,11 @@ function init(){
 
 function parse() {
     var params = self.location.search;
-    var text = params.split('&Best2k=');
-    B2k = parseInt(text[1]);
+    var text = params.split('&');
+    B2k = parseInt(text[1].split('Best2k=')[0]);
+    if(B2k == 0){
+    	user2k();
+    }
     pid = text[0].split('?')[1];
     var qry = "http://oldv1kenobi.herokuapp.com/ergs.json" + text[0];
 	$.get(qry, function (workout){
@@ -187,4 +190,11 @@ function update_reps(){
 		$(z).after(rendering);
 	}
 	update_totals();
-}	
+}
+
+function user2k(){
+	if(localStorage['2k'] == undefined){
+		localStorage['2k'] = 420;
+	}
+	B2k = localStorage['2k'];
+}

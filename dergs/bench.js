@@ -49,6 +49,9 @@ function parse() {
     var params = self.location.search;
     var text = params.split('&Best2k=');
     B2k = parseInt(text[1]);
+    if(B2k == 0){
+    	user2k();
+    }
     bid = text[0].split('?')[1];
     var qry = "http://oldv1kenobi.herokuapp.com/ergs.json" + text[0];
     TEST = qry;
@@ -103,5 +106,11 @@ function add_reps(index){
 	}
 	return rendering;
 }
-	
+
+function user2k(){
+	if(localStorage['2k'] == undefined){
+		localStorage['2k'] = 420;
+	}
+	B2k = localStorage['2k'];
+}
 

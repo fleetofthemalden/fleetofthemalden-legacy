@@ -70,7 +70,7 @@ function showWorkoutBrian() {
 function showWorkout() {
  B2k = localStorage['2k'];
  benchWin = window.open(
-  'workout.html?pid='+ProtoId+'&Best2k='+B2k,
+  'workout.html?pid='+ProtoId+'&Best2k='+B2k+'&reps=1',
   'benchWin',
   workString
  );

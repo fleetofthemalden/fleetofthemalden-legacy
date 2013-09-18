@@ -163,9 +163,6 @@ text += '<TD HEIGHT=' + cellHeight + '>'
 text += '<FONT COLOR="' + todayColor + '">'
 text += digit
 text += '</FONT><BR>'
-text += '<FONT COLOR="' + timeColor + '" SIZE=2>'
-text += '<CENTER>' + getTime() + '</CENTER>'
-text += '</FONT>'
 text += '</TD>'
 } else
 text += '<TD HEIGHT=' + cellHeight + '>' + digit + '</TD>'
