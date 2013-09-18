@@ -50,7 +50,7 @@ function showBenchBrian() {
 function showBench() {
  B2k = localStorage['2k'];
  benchWin = window.open(
-  'bench.html?pid='+ProtoId+'&Best2k='+B2k,
+  'bench.html?p='+ProtoId+'&Best2k='+B2k,
   'benchWin',
   benchString
  );
