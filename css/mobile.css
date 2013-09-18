@@ -15,7 +15,7 @@ body{
 	
 }
 
-div{
+#main{
 	border: 2px solid white;
 	border-bottom-right-radius: 20px;
 	border-bottom-left-radius: 20px;
@@ -29,6 +29,10 @@ div{
 }
 
 #sterling{
+	border: 2px solid white;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	background-color:white;
 	border-top-right-radius: 20px;
 	border-top-left-radius: 20px;
 }

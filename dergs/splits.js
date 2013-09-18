@@ -1,5 +1,6 @@
 var ProtoId = 81;
-var show = showWorkout;
+var show = showWorkoutBrian;
+var show2 = showWorkout;
 var benchString = 'width=350,height=350,left=130,top=5,toolbar=no,scrollbars=no,status=no,resizable=no';
 var workString = 'width=350,height=600,left=30,top=5,toolbar=no,scrollbars=no,status=no,resizable=no';
 var TEST;
@@ -36,7 +37,7 @@ function user2k(){
 	update2k();
 }
 
-function showBench() {
+function showBenchBrian() {
  B2k = localStorage['2k'];
  benchWin = window.open(
   'http://tuftsoarsmen.org/dergs/benchmark_show.php?p='+ProtoId+'&best2k='+B2k,
@@ -46,7 +47,17 @@ function showBench() {
  benchWin.focus();
 }
 
-function showWorkout() {
+function showBench() {
+ B2k = localStorage['2k'];
+ benchWin = window.open(
+  'bench.html?pid='+ProtoId+'&Best2k='+B2k,
+  'benchWin',
+  benchString
+ );
+ benchWin.focus();
+}
+
+function showWorkoutBrian() {
  B2k = localStorage['2k'];
  benchWin = window.open(
   'http://tuftsoarsmen.org/dergs/workout_show.php?pid='+ProtoId+'&best2k='+B2k,
@@ -56,10 +67,10 @@ function showWorkout() {
  benchWin.focus();
 }
 
-function show2() {
+function showWorkout() {
  B2k = localStorage['2k'];
  benchWin = window.open(
-  'workout.html/?pid='+ProtoId+'&Best2k='+B2k,
+  'workout.html?pid='+ProtoId+'&Best2k='+B2k,
   'benchWin',
   workString
  );
@@ -81,9 +92,11 @@ function selectWorkout(type){
 		ProtoId = z;
 	}
 	if(type == "benchmark"){
-		show = showBench;
+		show2 = showBench;
+		show = showBenchBrian;
 	}
 	else{
-		show = showWorkout;
+		show2 = showWorkout;
+		show = showWorkoutBrian;
 	}
 }
