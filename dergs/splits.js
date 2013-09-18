@@ -59,7 +59,7 @@ function showWorkout() {
 function show2() {
  B2k = localStorage['2k'];
  benchWin = window.open(
-  'http://oldv1kenobi.herokuapp.com/?pid='+ProtoId+'&Best2k='+B2k,
+  'workout.html/?pid='+ProtoId+'&Best2k='+B2k,
   'benchWin',
   workString
  );
