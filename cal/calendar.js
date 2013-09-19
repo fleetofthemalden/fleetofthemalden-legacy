@@ -83,10 +83,10 @@ var border = 2 // 3D height of table's border
 var cellspacing = 4 // width of table's border
 var headerColor = "midnightblue" // color of table's header
 var headerSize = "+3" // size of tables header font
-var colWidth = 70 // width of columns in table
+var colWidth = 90 // width of columns in table
 var dayCellHeight = 25 // height of cells containing days of the week
 var dayColor = "darkblue" // color of font representing week days
-var cellHeight = 50 // height of cells representing dates in the calendar
+var cellHeight = 70 // height of cells representing dates in the calendar
 var todayColor = "red" // color specifying today's date in the calendar
 var timeColor = "purple" // color of font representing current time
 
@@ -138,11 +138,11 @@ curCell++
 if (digit == date) { // current cell represent today's date
 text += '<TD HEIGHT=' + cellHeight + '>'
 text += '<FONT COLOR="' + todayColor + '">'
-text += digit
+text += cell_text(digit)
 text += '</FONT><BR>'
 text += '</TD>'
 } else
-text += '<TD HEIGHT=' + cellHeight + '>' + digit + '</TD>'
+text += '<TD HEIGHT=' + cellHeight + '>' + cell_text(digit) + '</TD>'
 digit++
 }
 }
@@ -162,16 +162,18 @@ function cell_text(digit){
 	for(var i=0; i<wkts[digit].length; i++){
 		text+= wkts[digit][i].a + "<br />";
 	}
-	return "<table id='tabd" + digit + "' border=0 width=70 height=50><tr><td id='d" + 
-	digit + "'>" + text + "</td><td>" + digit + "</td></tr></table>";
+	return "<table id='tabd" + digit + "' border=0 width=90 height=70><tr><td ALIGN='left' id='d" + 
+	digit + "'><small>" + text + "</small></td><td ALIGN='right' VALIGN='top'>" + digit + "</td></tr></table>";
 }
 
 function getWorkouts(cal){
 	now = new Date()
-	var qry = "http://oldv1kenobi.herokuapp.com/cal.json?month=" + now.getMonth() + "&cal=" + cal;
+	//var qry = "http://oldv1kenobi.herokuapp.com/cal.json?month=" + (now.getMonth() + 1) + "&cal=" + cal;
+	var qry = "http://oldv1kenobi.herokuapp.com/cal.json?cal=" + cal;
 	$.get(qry, function (workouts){
 		if(workouts.length == 0){
 			//alert("No workout data found");
+			setCal();
 		}
 		else{
 			for(var i=1; i<32; i++){
@@ -179,10 +181,12 @@ function getWorkouts(cal){
 			}
 			for(var i=0; i<workouts.length; i++){
 				var temp = workouts[i];
-				wkts[temp.date].push(temp);
+				TEST = temp;
+				wkts[temp.day].push(temp);
 			}
+			setCal();
 		}
 	});
-	setCal();
+	
 }
 	
