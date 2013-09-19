@@ -170,7 +170,7 @@ function getWorkouts(cal){
 	var qry = "http://oldv1kenobi.herokuapp.com/cal.json?month=" + now.getMonth() + "&cal=" + cal;
 	$.get(qry, function (workouts){
 		if(workouts.length == 0){
-			alert("No workout data found");
+			//alert("No workout data found");
 		}
 		else{
 			for(var i=1; i<32; i++){

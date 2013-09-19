@@ -1,4 +1,8 @@
 body{
+	background-color: gray;
+}
+
+#body_div{
 	background-color:gray;
 	font-family: "Verdana", Geneva, sans-serif;
 	font-size: 40px;
