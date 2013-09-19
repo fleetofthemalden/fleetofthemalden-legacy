@@ -4,7 +4,7 @@ Additional examples from the book can be found at http://www.geocities.com/Silic
 For more information contact Tomer or Yehuda Shiran <yshiran@iil.intel.com>*/
 
 var wkts = new Object()
-var now = new Date()
+var now
 
 
 function leapYear(year) {
@@ -167,6 +167,7 @@ function cell_text(digit){
 }
 
 function getWorkouts(cal){
+	now = new Date()
 	var qry = "http://oldv1kenobi.herokuapp.com/cal.json?month=" + now.getMonth() + "&cal=" + cal;
 	$.get(qry, function (workouts){
 		if(workouts.length == 0){
