@@ -168,8 +168,8 @@ function cell_text(digit){
 
 function getWorkouts(cal){
 	now = new Date()
-	//var qry = "http://oldv1kenobi.herokuapp.com/cal.json?month=" + (now.getMonth() + 1) + "&cal=" + cal;
-	var qry = "http://oldv1kenobi.herokuapp.com/cal.json?cal=" + cal;
+	var qry = "http://oldv1kenobi.herokuapp.com/cal.json?month=" + (now.getMonth() + 1) + "&cal=" + cal;
+	//var qry = "http://oldv1kenobi.herokuapp.com/cal.json?cal=" + cal;
 	$.get(qry, function (workouts){
 		if(workouts.length == 0){
 			//alert("No workout data found");

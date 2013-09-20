@@ -32,26 +32,31 @@ Uses local storage to save user preferences (target 2k)
 Launched February 2013
 _
 
-Phase 2: Expected November 2013
+Phase 2: Completed!
 
 Enable workouts to be displayed easily on a mobile device (or pc) using resources native to
 fleetofthemalden.com, independent of tuftscrew.org/tuftsoarsmen.org
 This requires a proprietary database of all workouts (Completed September 2013), a web
 server built to hold the database and deliver information to the user (Completed September
-2013), fine tuned algorithms to determine appropriate training splits (in progress), and
+2013), fine tuned algorithms to determine appropriate training splits (ongoing), and
 an interface to render the workout information for the user which can be viewed easily on
-a mobile device (in progress).
+a mobile device (Completed September 2013).
+
+Launched September 2013
 _
 
-Phase 3: Expected December 2013
+Phase 3: Expected November 2013
+
+Create a calendar view with linked workouts for each team. (in Progress)
+Create an interface to allow captains to add/delete workouts to the calendar. (in Progress)
+Make secure login for captains for add/delete page.
+Update database to include all information.
+_
+
+Phase 4: Expected December 2013
 
 Implement a feedback system to allow users to rate the difficulty of the workout.
 Server necessary to handle requests is already implemented
-_
-
-Phase 4: Expected February 2014
-
-Create a calendar view with linked workouts for each team.
 _
 
 Phase 5: Expected Spring 2014

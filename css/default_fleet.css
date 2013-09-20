@@ -26,6 +26,24 @@ body{
 	
 }
 
+.mid_div{
+	border: 2px solid white;
+	background-color:white;
+	padding-top: 5px;
+	padding-bottom: 20px;
+	padding-left:  5px;
+	padding-right: 5px;
+}
+
+#nav_bar{
+	padding-left: 100px;
+	padding-right: 100px;
+	padding-bottom: 5px;
+	border-bottom: 8px solid SkyBlue;
+}
+
+
+
 #altback{
 	background:#855C33 url(../images/flag.jpeg);
 	border: 2px solid #5959FF;
@@ -113,5 +131,5 @@ button{font-size: 20px;}
 
 a.sneakylink{color: black; text-decoration: none;}
 
-
+a.nav{text-decoration: none;}
 	
