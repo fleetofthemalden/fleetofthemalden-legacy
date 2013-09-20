@@ -159,7 +159,8 @@ $('#caldiv').append(text)
 
 function cell_text(digit){
 	var text = "";
-	for(var i=0; i<wkts[digit].length; i++){
+	var len = 0 + wkts[digit].length;
+	for(var i=0; i<len; i++){
 		text+= wkts[digit][i].a + "<br />";
 	}
 	return "<table id='tabd" + digit + "' border=0 width=90 height=70><tr><td ALIGN='left' id='d" + 
