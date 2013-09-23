@@ -4,8 +4,9 @@ Additional examples from the book can be found at http://www.geocities.com/Silic
 For more information contact Tomer or Yehuda Shiran <yshiran@iil.intel.com>*/
 
 var wkts = new Object()
-var now
-
+var now;
+var TEST;
+var cal;
 
 function leapYear(year) {
 if (year % 4 == 0) // basic rule
@@ -62,7 +63,6 @@ year+=1900
 var month = now.getMonth()
 var monthName = getMonthName(month)
 var date = now.getDate()
-now = null
 
 // create instance of first day of month, and extract the day on which it occurs
 var firstDayInstance = new Date(year, month, 1)
@@ -95,9 +95,11 @@ var text = "" // initialize accumulative variable to empty string
 text += '<CENTER>'
 text += '<TABLE BORDER=' + border + ' CELLSPACING=' + cellspacing + '>' // table settings
 text += '<TH COLSPAN=7 HEIGHT=' + headerHeight + '>' // create table header cell
+text += '<a class="arrow" id="prev">&lt;&lt;&nbsp;&nbsp;</a>'  // previous arrow
 text += '<FONT COLOR="' + headerColor + '" SIZE=' + headerSize + '>' // set font for table header
-text += monthName + ' ' + year 
+text += monthName + ' ' + year
 text += '</FONT>' // close table header's font settings
+text += '<a class="arrow" id="next">&nbsp;&nbsp;&gt;&gt;</a>' // next arrow
 text += '</TH>' // close header cell
 
 // variables to hold constant settings
@@ -159,7 +161,10 @@ $('#caldiv').append(text)
 
 function cell_text(digit){
 	var text = "";
-	var len = 0 + wkts[digit].length;
+	var len = 0;
+	if(!(wkts[digit] === undefined)){
+		len += wkts[digit].length;
+	}
 	for(var i=0; i<len; i++){
 		text+= wkts[digit][i].a + "<br />";
 	}
@@ -167,27 +172,51 @@ function cell_text(digit){
 	digit + "'><small>" + text + "</small></td><td ALIGN='right' VALIGN='top'>" + digit + "</td></tr></table>";
 }
 
-function getWorkouts(cal){
-	now = new Date()
-	var qry = "http://oldv1kenobi.herokuapp.com/cal.json?month=" + (now.getMonth() + 1) + "&cal=" + cal;
+function getWorkouts(cal_name){
+	now = new Date();
+	cal = cal_name;
+	getCurrentWorkouts();
+}
+
+function getCurrentWorkouts(){
+	var qry = "";
+	qry = "http://oldv1kenobi.herokuapp.com/cal.json?month=" + (now.getMonth() + 1) + "&cal=" + cal;
 	//var qry = "http://oldv1kenobi.herokuapp.com/cal.json?cal=" + cal;
 	$.get(qry, function (workouts){
+		for(var i=1; i<32; i++){
+				wkts[i] = new Array();
+		}
 		if(workouts.length == 0){
 			//alert("No workout data found");
+			//TEST = workouts;
 			setCal();
+			arrowInit();
 		}
 		else{
-			for(var i=1; i<32; i++){
-				wkts[i] = new Array();
-			}
 			for(var i=0; i<workouts.length; i++){
 				var temp = workouts[i];
-				TEST = temp;
+				//TEST = temp;
 				wkts[temp.day].push(temp);
 			}
 			setCal();
+			arrowInit();
 		}
-	});
-	
+	});	
 }
+
+function arrowInit(){	
+	$('#next').click(function(){
+		now.setMonth(now.getMonth() + 1);
+		$('#caldiv').empty();
+		getCurrentWorkouts();
+	});
+	$('#prev').click(function(){
+		now.setMonth(now.getMonth() - 1);
+		$('#caldiv').empty();
+		getCurrentWorkouts();
+	});
+}
+	
+	
+		
 	
