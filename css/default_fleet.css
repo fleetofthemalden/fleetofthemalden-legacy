@@ -24,6 +24,16 @@ body{
 	padding-right: 5px;
 }
 
+.main_div{
+	border: 2px solid white;
+	background-color:white;
+	padding-top: 5px;
+	padding-bottom: 20px;
+	padding-left: 100px;
+	padding-right: 100px;
+	
+}
+
 #nav_bar{
 	padding-left: 100px;
 	padding-right: 100px;

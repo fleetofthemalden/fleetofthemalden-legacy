@@ -63,6 +63,8 @@ year+=1900
 var month = now.getMonth()
 var monthName = getMonthName(month)
 var date = now.getDate()
+var tempd = new Date()
+if(tempd.getMonth() != month){date = 0}
 
 // create instance of first day of month, and extract the day on which it occurs
 var firstDayInstance = new Date(year, month, 1)
