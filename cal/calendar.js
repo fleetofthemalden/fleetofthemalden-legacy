@@ -216,7 +216,15 @@ function arrowInit(){
 		getCurrentWorkouts();
 	});
 }
-	
+
+function wktDay(day){
+	var text = "<ul>";
+	for(var i=0; i<wkts.length; i++){
+		text += "<li>" + wkts[i].a + "</li>";
+	}
+	text += "</ul>";
+	$("today").append(text);
+}
 	
 		
 	
