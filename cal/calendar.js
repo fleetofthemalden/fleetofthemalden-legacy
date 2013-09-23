@@ -181,6 +181,7 @@ function getWorkouts(cal_name){
 }
 
 function getCurrentWorkouts(){
+	$('#caldiv').empty();
 	var qry = "";
 	qry = "http://oldv1kenobi.herokuapp.com/cal.json?month=" + (now.getMonth() + 1) + "&cal=" + cal;
 	//var qry = "http://oldv1kenobi.herokuapp.com/cal.json?cal=" + cal;
@@ -209,12 +210,10 @@ function getCurrentWorkouts(){
 function arrowInit(){	
 	$('#next').click(function(){
 		now.setMonth(now.getMonth() + 1);
-		$('#caldiv').empty();
 		getCurrentWorkouts();
 	});
 	$('#prev').click(function(){
 		now.setMonth(now.getMonth() - 1);
-		$('#caldiv').empty();
 		getCurrentWorkouts();
 	});
 }
