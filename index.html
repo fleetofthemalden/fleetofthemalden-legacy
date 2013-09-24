@@ -4,7 +4,12 @@
 <title>redirect</title>
 </head>
 <body>
-<script>document.location = 'dergs/splits.html';</script>
+<script>
+if(localStorage['home_pg'] == undefined){
+	localStorage['home_pg'] = "dergs/splits.html";
+}
+document.location = localStorage['home_pg'];
+</script>
 redirecting...
 </body>
 </html>
