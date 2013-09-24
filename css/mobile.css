@@ -32,6 +32,16 @@ body{
 	
 }
 
+#main{
+	border: 2px solid white;
+	background-color:white;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 5%;
+	padding-right: 5%;	
+	
+}
+
 .mid_div{
 	border: 2px solid white;
 	background-color:white;

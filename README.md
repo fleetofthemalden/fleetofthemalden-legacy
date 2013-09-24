@@ -47,10 +47,10 @@ _
 
 Phase 3: Expected November 2013
 
-Create a calendar view with linked workouts for each team. (in Progress)
-Create an interface to allow captains to add/delete workouts to the calendar. (in Progress)
-Make secure login for captains for add/delete page.
-Update database to include all information.
+Create a calendar view with linked workouts for each team. (Completed September 2013)
+Create an interface to allow captains to add/delete workouts to the calendar. (Completed September 2013)
+Make secure login for captains for add/delete page. (ongoing)
+Update database to include all information. (in progress)
 _
 
 Phase 4: Expected December 2013

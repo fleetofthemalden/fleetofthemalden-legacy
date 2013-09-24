@@ -171,7 +171,7 @@ function cell_text(digit){
 		text+= wkts[digit][i].a + "<br />";
 	}
 	return "<table id='tabd" + digit + "' border=0 width=90 height=70><tr><td ALIGN='left' id='d" + 
-	digit + "'><small>" + text + "</small></td><td ALIGN='right' VALIGN='top'>" + digit + "</td></tr></table>";
+	digit + "'><small>" + text + "</small></td></tr><tr><td ALIGN='right' VALIGN='top'>" + digit + "</td></tr></table>";
 }
 
 function getWorkouts(cal_name){
