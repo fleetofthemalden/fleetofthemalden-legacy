@@ -11,7 +11,7 @@ function user2k(){
 	if(localStorage['2k'] == undefined){
 		localStorage['2k'] = 420;
 	}
-	var y = document.getElementById("target2k");
+	var y = document.getElementById("2k");
 	var x = localStorage['2k'];
 	x = x/2 - 180;
 	y.selectedIndex = x;
