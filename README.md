@@ -59,12 +59,12 @@ Implement a feedback system to allow users to rate the difficulty of the workout
 Server necessary to handle requests is already implemented
 _
 
-Phase 5: Expected Spring 2014
+Phase 5: Expected January 2014
 
 Create an interface to allow users to submit their own custom workouts.
 _
 
-Phase 6: Expected Fall/Winter 2014
+Phase 6: Expected Summer/Fall 2014
 
 Develop iOS app that implements all existing features of fleetofthemalden.com
 Future expansion of iOS application:

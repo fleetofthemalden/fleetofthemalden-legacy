@@ -162,16 +162,8 @@ $('#caldiv').append(text)
 }
 
 function cell_text(digit){
-	var text = "";
-	var len = 0;
-	if(!(wkts[digit] === undefined)){
-		len += wkts[digit].length;
-	}
-	for(var i=0; i<len; i++){
-		text+= wkts[digit][i].a + "<br />";
-	}
-	return "<table id='tabd" + digit + "' border=0 width=90 height=70><tr><td ALIGN='left' id='d" + 
-	digit + "'><small>" + text + "</small></td></tr><tr><td ALIGN='right' VALIGN='top'>" + digit + "</td></tr></table>";
+	return "<table id='tabd" + digit + "' border=0 width=90 height=70><tr><td ALIGN='right' VALIGN='top'>" + 
+	digit + "</td></tr><tr><td ALIGN='left'><small id='d" + digit + "'></small></td></tr></table>";
 }
 
 function getWorkouts(cal_name){
@@ -180,8 +172,7 @@ function getWorkouts(cal_name){
 	getCurrentWorkouts();
 }
 
-function getCurrentWorkouts(){
-	$('#caldiv').empty();
+function getWktData(){
 	var qry = "";
 	qry = "http://oldv1kenobi.herokuapp.com/cal.json?month=" + (now.getMonth() + 1) + "&cal=" + cal;
 	//var qry = "http://oldv1kenobi.herokuapp.com/cal.json?cal=" + cal;
@@ -192,19 +183,26 @@ function getCurrentWorkouts(){
 		if(workouts.length == 0){
 			//alert("No workout data found");
 			//TEST = workouts;
-			setCal();
-			arrowInit();
 		}
 		else{
 			for(var i=0; i<workouts.length; i++){
 				var temp = workouts[i];
 				//TEST = temp;
 				wkts[temp.day].push(temp);
+				
 			}
-			setCal();
-			arrowInit();
+			for(var i=1; i<32; i++){
+				$("#d" + i).html(cellText(i));
+			}
 		}
 	});	
+}
+
+function getCurrentWorkouts(){
+	$('#caldiv').empty();
+	setCal();
+	arrowInit();
+	getWktData();
 }
 
 function arrowInit(){	
@@ -216,6 +214,18 @@ function arrowInit(){
 		now.setMonth(now.getMonth() - 1);
 		getCurrentWorkouts();
 	});
+}
+
+function cellText(digit){
+	var text = "";
+	var len = 0;
+	if(!(wkts[digit] === undefined)){
+		len += wkts[digit].length;
+	}
+	for(var i=0; i<len; i++){
+		text+= wkts[digit][i].a + "<br />";
+	}
+	return text;
 }
 
 function wktDay(day){
