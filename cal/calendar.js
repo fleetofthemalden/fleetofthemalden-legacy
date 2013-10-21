@@ -174,8 +174,8 @@ function getWorkouts(cal_name){
 
 function getWktData(){
 	var qry = "";
-	qry = "http://oldv1kenobi.herokuapp.com/cal.json?month=" + (now.getMonth() + 1) + "&cal=" + cal;
-	//var qry = "http://oldv1kenobi.herokuapp.com/cal.json?cal=" + cal;
+	qry = "http://fleetofthemalden.herokuapp.com/cal.json?month=" + (now.getMonth() + 1) + "&cal=" + cal;
+	//var qry = "http://fleetofthemalden.herokuapp.com/cal.json?cal=" + cal;
 	$.get(qry, function (workouts){
 		for(var i=1; i<32; i++){
 				wkts[i] = new Array();

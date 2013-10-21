@@ -3,8 +3,8 @@
 function getWorkouts(cal){
 	var wkts = new Array();
 	var now = new Date()
-	var qry = "http://oldv1kenobi.herokuapp.com/cal.json?month=" + (now.getMonth() + 1) + "&day" + (now.getDay() + 1) + "&cal=" + cal;
-	//var qry = "http://oldv1kenobi.herokuapp.com/cal.json?cal=" + cal;
+	var qry = "http://fleetofthemalden.herokuapp.com/cal.json?month=" + (now.getMonth() + 1) + "&day" + (now.getDay() + 1) + "&cal=" + cal;
+	//var qry = "http://fleetofthemalden.herokuapp.com/cal.json?cal=" + cal;
 	$.get(qry, function (workouts){
 		if(workouts.length == 0){
 			var text = "<p>None</p>";

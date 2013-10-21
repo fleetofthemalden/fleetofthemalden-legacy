@@ -75,7 +75,7 @@ function parse() {
     	user2k();
     }
     pid = text[0].split('?')[1];
-    var qry = "http://oldv1kenobi.herokuapp.com/ergs.json" + text[0];
+    var qry = "http://fleetofthemalden.herokuapp.com/ergs.json" + text[0];
 	$.get(qry, function (workout){
 		if(workout.length == 0){
 			alert("No workout data found");

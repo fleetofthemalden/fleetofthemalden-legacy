@@ -53,7 +53,7 @@ function parse() {
     	user2k();
     }
     bid = text[0].split('?')[1];
-    var qry = "http://oldv1kenobi.herokuapp.com/ergs.json" + text[0];
+    var qry = "http://fleetofthemalden.herokuapp.com/ergs.json" + text[0];
     TEST = qry;
 	$.get(qry, function (workout){
 		if(workout.length == 0){
