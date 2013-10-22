@@ -114,7 +114,9 @@ h1{
 
 .m_hidden{display: none;}
 
-button{font-size: 50px;}
+.big_butt{font-size: 50px;}
+
+.red{color:red;}
 
 select{
 	font-size:35px;
