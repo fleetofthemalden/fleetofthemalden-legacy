@@ -6,6 +6,7 @@ var work_it;
 var parse_v = function (w){return w;};
 var unparse_v = function (w){return w;};
 var tots;
+var t_rest = 0;
 
 var TEST;
 
@@ -49,12 +50,12 @@ function clocker(intv, split){
 }
 
 function total_col(c_name){
+	var w = 0;
 	if(c_name == "work"){ //parsing of time intervals
 		c_name = "Interval_work";
 		parse_v = detimify;
 		unparse_v = timify;
 	}
-	var w = 0;
 	var len = wkt[c_name].length;
 	for(var i=0; i<len; i++){
 		w = w + parse_v(wkt[c_name][i]);
@@ -88,7 +89,7 @@ function parse() {
 				work_it = distancer;
 				tots = function(){
 					wkt.Distance = total_col("Interval_work");
-					wkt.Work = "0:00"; //need to update db;
+					//wkt.Work = "0:00";
 				}
 			}
 			else{
@@ -96,7 +97,7 @@ function parse() {
 				work_it = clocker;
 				tots = function(){
 					wkt.Work = total_col("work");
-					wkt.Time = wkt.Work; //+ rest, need to update db
+					wkt.Time = timify(detimify(wkt.Work) + t_rest); //+ rest, need to update db
 				}	
 			}
 			render();
@@ -106,7 +107,7 @@ function parse() {
 
 function render(){
 	var rendering = "<table BORDER=0><tr><td>" + wkt.name + "</td></tr><tr><td><table BORDER=1px><tr id='wkt'><td class='lrgr'>Interval</td><td class='lrgr'>&nbsp;Rate&nbsp;</td><td class='lrgr'>&nbsp;Split&nbsp;</td><td class='lrgr'>&nbsp;" + wkt.atype + "&nbsp;</td></tr>";
-	rendering = rendering + add_reps(1) + "</table></td></tr><tr><td>&nbsp;</td></tr>";
+	rendering = rendering + add_reps(1) + "</table></td></tr><tr><td><button class='big_butt' type='button' onclick='rate()'>Rate Difficulty</button></td></tr>";
 	tots();
 	rendering = rendering + "<tr><td><table><tr><td><table>"
 	+ "<tr><td id='time'>Time: " + timify(reps*detimify(wkt.Time)) + "</td></tr>"
@@ -120,6 +121,7 @@ function render(){
 	$('#sterling').append(rendering);
 	var y = document.getElementById("best2k");
 	y.selectedIndex = B2k - 350;
+	
 }
 
 function add_reps(index){
@@ -139,6 +141,7 @@ function add_reps(index){
 			+ "<td class='rest' >" + intv + "</td>"
 			+ "<td class='rest' >" + wrate + "</td>"
 			+ "<td class='rest' ></td></tr>";
+			moar_rest(intv);
 		}
 		else{
 			var iwork = work_it(intv, wsplit);
@@ -199,3 +202,31 @@ function user2k(){
 	}
 	B2k = localStorage['2k'];
 }
+
+function rate(){
+	var text = '<br><form><table>';
+	text += '<tr><td>Difficulty:</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td><button class="big_butt" type="button" onclick="submit()">Submit</button></td></tr>';
+	text += '<tr><td>Very Easy</td>';
+	text += '<td><input type="radio" name="difficulty" value="1"></td>';
+	text += '<td><input type="radio" name="difficulty" value="2"></td>';
+	text += '<td><input type="radio" name="difficulty" value="3"></td>';
+	text += '<td><input type="radio" name="difficulty" value="4"></td>';
+	text += '<td><input type="radio" name="difficulty" value="5"></td>';
+	text += '<td>DEATH</td></tr></table></form><br>';
+	$('.big_butt').replaceWith(text);
+}
+
+function submit(){
+	var rating = new Object();
+	rating.workout = wkt;
+	rating.target2k = B2k;
+	rating.pid = pid;
+	rating.reps = reps;
+	$.post("http://fleetofthemalden.herokuapp.com/rate.json", rating);
+	alert("Thank you for your feedback.");
+}
+
+function moar_rest(moar){
+	t_rest += detimify(moar);
+}
+	

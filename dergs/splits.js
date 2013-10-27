@@ -8,8 +8,9 @@ var TEST;
 function init(){
 	displayQuote();
 	user2k();
+	cachedCustom();
 	set_size();
-	event_init();
+	//event_init();
 }
 
 function event_init(){
@@ -23,8 +24,17 @@ function set_size(){
 		benchString = 'width=500,height=350,left=150,top=10,toolbar=no,scrollbars=no,status=no,resizable=no';
 	}
 }
+
+function cachedCustom(){
+	var custom = localStorage['custom'];
+	if(custom == undefined){
+		updateCustom();
+	}
+	else{
+		$(custom).insertBefore('#updateCustom');
+	}
+}
 	
-		
 	
 function user2k(){
 	if(localStorage['2k'] == undefined){
@@ -35,6 +45,26 @@ function user2k(){
 	x = x/2 - 180;
 	y.selectedIndex = x;
 	update2k();
+}
+
+function updateCustom(){
+	var qry = "";
+	qry = "http://fleetofthemalden.herokuapp.com/clist.json";
+	$.get(qry, function (workouts){
+		if(workouts.length == 0){
+			alert("No workout data found");
+			//TEST = workouts;
+		}
+		else{
+			var customs = '';
+			for(var i=0; i<workouts.length; i++){
+				var temp = '<option value=' + workouts[i].pid + '>' + workouts[i].name + '</option>';
+				custom += temp;
+			}
+			localStorage['custom'] = custom;
+			$(custom).insertBefore('#updateCustom');
+		}
+	});
 }
 
 function showBenchBrian() {
