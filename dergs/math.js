@@ -107,7 +107,7 @@ function parse() {
 
 function render(){
 	var rendering = "<table BORDER=0><tr><td>" + wkt.name + "</td></tr><tr><td><table BORDER=1px><tr id='wkt'><td class='lrgr'>Interval</td><td class='lrgr'>&nbsp;Rate&nbsp;</td><td class='lrgr'>&nbsp;Split&nbsp;</td><td class='lrgr'>&nbsp;" + wkt.atype + "&nbsp;</td></tr>";
-	rendering = rendering + add_reps(1) + "</table></td></tr><tr><td><button class='big_butt' type='button' onclick='rate()'>Rate Difficulty</button></td></tr>";
+	rendering = rendering + add_reps(1) + "</table></td></tr><tr><td><button id='rbutt' class='big_butt' type='button' onclick='rate()'>Rate Difficulty</button></td></tr>";
 	tots();
 	rendering = rendering + "<tr><td><table><tr><td><table>"
 	+ "<tr><td id='time'>Time: " + timify(reps*detimify(wkt.Time)) + "</td></tr>"
@@ -213,10 +213,11 @@ function rate(){
 	text += '<td><input type="radio" name="difficulty" value="4"></td>';
 	text += '<td><input type="radio" name="difficulty" value="5"></td>';
 	text += '<td>DEATH</td></tr></table></form><br>';
-	$('.big_butt').replaceWith(text);
+	$('#rbutt').replaceWith(text);
 }
 
 function submit(){
+	alert('halt');
 	var rating = new Object();
 	rating.rating = $( "input:radio[name=difficulty]:checked" ).val();
 	rating.workout = wkt;

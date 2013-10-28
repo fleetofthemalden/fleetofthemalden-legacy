@@ -76,6 +76,8 @@ function displayCustom(){
 	text += localStorage['custom'];
 	text += '<option value=4242 id="updateCustom">Update</option></select>';
 	$('#customForm').html(text);
+	var y = document.getElementById("custom");
+	y.selectedIndex = 6969;
 }
 
 function showBenchBrian() {
