@@ -70,7 +70,6 @@ function init(){
 function parse() {
     var params = self.location.search;
     var text = params.split('&');
-    TEST = text;
     B2k = parseInt(text[1].split('=')[1]);
     if(B2k == 0){
     	user2k();
@@ -89,16 +88,28 @@ function parse() {
 				work_it = distancer;
 				tots = function(){
 					wkt.Distance = total_col("Interval_work");
-					//wkt.Work = "0:00";
 				}
 			}
-			else{
+			else if(wkt.type == "distance"){
 				wkt.atype = "Time";
 				work_it = clocker;
 				tots = function(){
 					wkt.Work = total_col("work");
 					wkt.Time = timify(detimify(wkt.Work) + t_rest); //+ rest, need to update db
 				}	
+			}
+			else{
+				wkt.atype = "Interval Work";
+				tots = c_tots;
+				work_it = function(intv, split){
+					if(isNaN(intv)){
+						return distancer(intv, split);
+						
+					}
+					else{
+						clocker(intv, split);
+					}
+				};
 			}
 			render();
 		}
@@ -196,6 +207,26 @@ function update_reps(){
 	update_totals();
 }
 
+function c_tots(){
+	var d = 0;
+	var t = 0;
+	var len = wkt.Interval.length;
+	for(var i=0; i<len; i++){
+		if(wkt.IntvType[i] == "distance"){
+			d += wkt.Interval[i];
+			t += detimify(wkt.Interval_work[i]);
+		}
+		if(wkt.IntvType[i] == "time"){
+			d += wkt.Interval_work[i];
+			t += detimify(wkt.Interval[i]);
+		}
+	}
+	//TEST = t;
+	wkt.Distance = d;
+	wkt.Time = timify(t + t_rest);
+	wkt.Work = timify(t);
+}
+
 function user2k(){
 	if(localStorage['2k'] == undefined){
 		localStorage['2k'] = 420;
@@ -213,6 +244,8 @@ function rate(){
 	text += '<td><input type="radio" name="difficulty" value="4"></td>';
 	text += '<td><input type="radio" name="difficulty" value="5"></td>';
 	text += '<td>DEATH</td></tr></table></form><br>';
+	
+	text = "Feature coming soon!";
 	$('#rbutt').replaceWith(text);
 }
 

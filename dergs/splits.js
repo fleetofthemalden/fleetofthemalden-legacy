@@ -63,7 +63,6 @@ function updateCustom(){
 				customs += temp;
 			}
 			localStorage['custom'] = customs;
-			//$(customs).insertBefore('#updateCustom');
 			displayCustom();
 		}
 	});
@@ -77,7 +76,7 @@ function displayCustom(){
 	text += '<option value=4242 id="updateCustom">Update</option></select>';
 	$('#customForm').html(text);
 	var y = document.getElementById("custom");
-	y.selectedIndex = 6969;
+	y.selectedIndex = 0;
 }
 
 function showBenchBrian() {
