@@ -218,11 +218,12 @@ function rate(){
 
 function submit(){
 	var rating = new Object();
+	rating.rating = $( "input:radio[name=difficulty]:checked" ).val();
 	rating.workout = wkt;
 	rating.target2k = B2k;
 	rating.pid = pid;
 	rating.reps = reps;
-	$.post("http://fleetofthemalden.herokuapp.com/rate.json", rating);
+	//$.post("http://fleetofthemalden.herokuapp.com/rate.json", rating);
 	alert("Thank you for your feedback.");
 }
 
