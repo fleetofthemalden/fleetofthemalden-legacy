@@ -118,6 +118,9 @@ function selectWorkout(type){
 	var y = document.getElementById(type);
 	var x = y.selectedIndex;
 	var z = y.getElementsByTagName("option")[x].value;
+	if(z == 4242){
+		updateCustom();
+	}
 	if(z != 6969){
 		ProtoId = z;
 	}
