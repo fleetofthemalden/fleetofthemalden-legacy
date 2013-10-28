@@ -60,11 +60,11 @@ function updateCustom(){
 			var customs = '';
 			for(var i=0; i<workouts.length; i++){
 				var temp = '<option value=' + workouts[i].pid + '>' + workouts[i].name + '</option>';
-				custom += temp;
+				customs += temp;
 			}
-			localStorage['custom'] = custom;
-			//$(custom).insertBefore('#updateCustom');
-			displayCustom(custom);
+			localStorage['custom'] = customs;
+			//$(customs).insertBefore('#updateCustom');
+			displayCustom(customs);
 		}
 	});
 }
