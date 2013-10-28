@@ -32,7 +32,7 @@ function cachedCustom(){
 	}
 	else{
 		//$(custom).insertBefore('#updateCustom');
-		displayCustom(custom);
+		displayCustom();
 	}
 }
 	
@@ -64,14 +64,16 @@ function updateCustom(){
 			}
 			localStorage['custom'] = customs;
 			//$(customs).insertBefore('#updateCustom');
-			displayCustom(customs);
+			displayCustom();
 		}
 	});
 }
 
-function displayCustom(custom){
-	var text = 'Custom:<select id="custom" onchange="selectWorkout("custom")"><option value=6969>SELECT</option>"';
-	text += custom;
+function displayCustom(){
+	var text = 'Custom:<select id="custom" onchange="selectWorkout(';
+	text += "'custom')";
+	text += '"><option value=6969>SELECT</option>';
+	text += localStorage['custom'];
 	text += '<option value=4242 id="updateCustom">Update</option></select>';
 	$('#customForm').html(text);
 }
