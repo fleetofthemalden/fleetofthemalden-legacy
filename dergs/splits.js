@@ -27,7 +27,7 @@ function set_size(){
 
 function cachedCustom(){
 	var custom = localStorage['custom'];
-	if(custom == undefined){
+	if(custom === undefined){
 		updateCustom();
 	}
 	else{
