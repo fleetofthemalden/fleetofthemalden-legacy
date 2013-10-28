@@ -205,7 +205,7 @@ function user2k(){
 
 function rate(){
 	var text = '<br><form><table>';
-	text += '<tr><td>Difficulty:</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td><button class="big_butt" type="button" onclick="submit()">Submit</button></td></tr>';
+	text += '<tr><td>Difficulty:</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td><button class="big_butt" type="button" onclick="">Submit</button></td></tr>';
 	text += '<tr><td>Very Easy</td>';
 	text += '<td><input type="radio" name="difficulty" value="1"></td>';
 	text += '<td><input type="radio" name="difficulty" value="2"></td>';
