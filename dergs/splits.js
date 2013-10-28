@@ -31,7 +31,8 @@ function cachedCustom(){
 		updateCustom();
 	}
 	else{
-		$(custom).insertBefore('#updateCustom');
+		//$(custom).insertBefore('#updateCustom');
+		displayCustom(custom);
 	}
 }
 	
@@ -62,9 +63,17 @@ function updateCustom(){
 				custom += temp;
 			}
 			localStorage['custom'] = custom;
-			$(custom).insertBefore('#updateCustom');
+			//$(custom).insertBefore('#updateCustom');
+			displayCustom(custom);
 		}
 	});
+}
+
+function displayCustom(custom){
+	var text = 'Custom:<select id="custom" onchange="selectWorkout("custom")"><option value=6969>SELECT</option>"';
+	text += custom;
+	text += '<option value=4242 id="updateCustom">Update</option></select>';
+	$('#customForm').html(text);
 }
 
 function showBenchBrian() {
