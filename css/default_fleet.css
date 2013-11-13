@@ -120,6 +120,39 @@ h4{
 
 }
 
+div.clicked{
+	padding: 5px;
+	margin: 0px;
+	border: 1px;
+	border-top-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	background-color: #FFFFD6;
+}
+td.clicked{
+	border: 1px solid #FFFFD6;
+	border-top-right-radius: 7px;
+	border-top-left-radius: 7px;
+	background-color: #FFFFD6;
+}
+td.clickable{
+	border: 1px solid gray;
+	border-bottom: 1px solid #FFFFD6;
+	border-top-right-radius: 7px;
+	border-top-left-radius: 7px;
+    cursor: pointer;
+}
+tr.tabbed{
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+table.tabbed{
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+
 small{
 	font-size: 8pt;
 }
@@ -127,6 +160,9 @@ small{
 .red{color:red;}
 
 .big_butt{font-size: 20px;}
+
+
+
 
 .mobile{display: none;}
 

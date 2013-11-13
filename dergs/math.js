@@ -9,11 +9,11 @@ var tots;
 var t_rest = 0;
 
 var TEST;
+//var TEST_a = new Array();
 
 
 function percent2k(rate){
-	return 1.5 - (.25/16)*rate;
-	//return -0.366385 * Math.log(0.00205715*rate);
+	return -0.366385 * Math.log(0.00205715*rate);
 }
 
 function splitter(rate){
@@ -26,13 +26,11 @@ function timify(secs){
 	}
 	else{
 		var s = secs%60
+		s = Math.round(s);
 		if(s < 10){
 			s = 0 + s.toString();
 		}
-		else{
-			s = s.toString();
-		}
-		return Math.floor(secs/60) + ":" + s.slice(0,2);
+		return Math.floor(secs/60) + ":" + s;
 	}
 }
 
@@ -221,7 +219,6 @@ function c_tots(){
 			t += detimify(wkt.Interval[i]);
 		}
 	}
-	//TEST = t;
 	wkt.Distance = d;
 	wkt.Time = timify(t + t_rest);
 	wkt.Work = timify(t);

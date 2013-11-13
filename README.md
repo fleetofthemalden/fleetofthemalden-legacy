@@ -1,6 +1,6 @@
 fleetofthemalden.com
 
-Last updated September 11, 2013
+Last updated October 28, 2013
 __________________________
 
 Executive Developer:
@@ -45,23 +45,29 @@ a mobile device (Completed September 2013).
 Launched September 2013
 _
 
-Phase 3: Expected November 2013
+Phase 3: Completed!
 
 Create a calendar view with linked workouts for each team. (Completed September 2013)
 Create an interface to allow captains to add/delete workouts to the calendar. (Completed September 2013)
-Make secure login for captains for add/delete page. (ongoing)
-Update database to include all information. (in progress)
+Make secure login for captains for add/delete page. (semi-secure)
+Update database to include all information. (completed October 2013)
+
+Launched October 2013
 _
 
 Phase 4: Expected December 2013
 
-Implement a feedback system to allow users to rate the difficulty of the workout.
-Server necessary to handle requests is already implemented
+Implement a feedback system to allow users to rate the difficulty of the workout. (completed October 2013)
+Server necessary to handle requests is already implemented.
+Implement interface for captains to view results (in progress)
 _
 
-Phase 5: Expected January 2014
+Phase 5: Completed!
 
 Create an interface to allow users to submit their own custom workouts.
+5.1: add ability to set raced based on 2k +/- n seconds.
+
+Launched October 2013
 _
 
 Phase 6: Expected Summer/Fall 2014
