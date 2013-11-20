@@ -70,7 +70,7 @@ Create an interface to allow users to submit their own custom workouts.
 Launched October 2013
 _
 
-Phase 6: Expected Summer/Fall 2014
+Phase 6: Expected Spring/Summer 2014
 
 Develop iOS app that implements all existing features of fleetofthemalden.com
 Future expansion of iOS application:

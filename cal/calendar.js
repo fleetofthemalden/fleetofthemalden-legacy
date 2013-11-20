@@ -236,6 +236,8 @@ function wktDay(day){
 	text += "</ul>";
 	$("today").append(text);
 }
+
+
 	
 		
 	

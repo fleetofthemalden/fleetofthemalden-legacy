@@ -242,7 +242,7 @@ function rate(){
 	text += '<td><input type="radio" name="difficulty" value="5"></td>';
 	text += '<td>DEATH</td></tr></table></form><br>';
 	
-	text = "Feature coming soon!";
+	//text = "Feature coming soon!";
 	$('#rbutt').replaceWith(text);
 }
 
