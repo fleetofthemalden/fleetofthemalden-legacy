@@ -20,16 +20,6 @@ function getWorkouts(cal){
 			var text = "<p>None</p>";
 			$("#main").append(text);
 		}
-		if(workouts.length == 1){
-			var text = getWorkoutText(workouts[0], 0);
-			var temp = text.split('"')[1];
-			if(temp == "clickable"){
-				$("#main").append(text);
-			}
-			else{
-				document.location = temp;
-			}
-		}
 		else{
 			var text = "<ul>";
 			for(var i=0; i<workouts.length; i++){
