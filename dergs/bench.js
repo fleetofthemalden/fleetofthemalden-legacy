@@ -18,13 +18,11 @@ function timify(secs){
 	}
 	else{
 		var s = secs%60
+		s = Math.round(s);
 		if(s < 10){
 			s = 0 + s.toString();
 		}
-		else{
-			s = s.toString();
-		}
-		return Math.floor(secs/60) + ":" + s.slice(0,2);
+		return Math.floor(secs/60) + ":" + s;
 	}
 }
 
