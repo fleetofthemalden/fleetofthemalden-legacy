@@ -1,6 +1,6 @@
 fleetofthemalden.com
 
-Last updated October 28, 2013
+Last updated December 4, 2013
 __________________________
 
 Executive Developer:
@@ -18,6 +18,20 @@ Women's Rowing Coach Brian Dawe and his webpages, tuftscrew.org and tuftsoarsmen
 The calculation of training splits  is adapted from data in an article in Volker Nolte's 
 collection Rowing Faster, specifically Kurt Jensen's "Monitoring Athlete's Physiology"
 
+____________________________
+
+ToDo List:
+
+-add authentication to upload page
+-fix reps display on workouts
+-check validity of benchmark calculations
+-Fix bugs with custom workouts
+-modify calendar page to allow users to go to specific day
+-add time to calendar
+-modify upload page to allow any type of file to be uploaded
+-modify add page to allow linking of files...though technically this can already be done
+-improve overall authentication
+-Phase 4
 ____________________________
 
 Development Timeline
@@ -38,7 +52,7 @@ Enable workouts to be displayed easily on a mobile device (or pc) using resource
 fleetofthemalden.com, independent of tuftscrew.org/tuftsoarsmen.org
 This requires a proprietary database of all workouts (Completed September 2013), a web
 server built to hold the database and deliver information to the user (Completed September
-2013), fine tuned algorithms to determine appropriate training splits (ongoing), and
+2013), fine tuned algorithms to determine appropriate training splits (Completed November 2013), and
 an interface to render the workout information for the user which can be viewed easily on
 a mobile device (Completed September 2013).
 

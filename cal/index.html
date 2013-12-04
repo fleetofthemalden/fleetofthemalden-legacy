@@ -9,7 +9,7 @@
 <link rel='apple-touch-icon' href='../images/apple-touch-icon.png' type='image/x-icon'>
 <link media="print, screen and (min-device-width: 700px)" href="../css/default_fleet.css" rel="stylesheet" />
 <link media="only screen and (max-device-width: 700px)" href="../css/mobile.css" rel="stylesheet" />
-
+<script src="../js/prefs.js"></script>
 </head>
 <body>
 <div id="body_div">
@@ -20,10 +20,19 @@
 <td>&nbsp;<a class="nav" href="../dergs/splits.html">ergs</a>&nbsp;|</td>
 <td>&nbsp;<a class="nav" href="vmen.html">vmen</a>&nbsp;|</td>
 <td>&nbsp;<a class="nav" href="vwomen.html">vwomen</a>&nbsp;|</td>
+<td>&nbsp;<a class="nav" href="todays_wkt.html">Today</a>&nbsp;|</td>
 <td>&nbsp;<a class="nav" href="../links.html">Links</a>&nbsp;</td>
 </tr></table>
 </div>
 <div id="main">
+<form>
+Preferred Calendar:
+<select id="cal" onchange="updateData('cal')">
+	<option value="6969">SELECT</option>
+	<option value="vmen">vmen</option>
+	<option value="vwomen">vwomen</option>
+</select>
+</form>
 <ul>
 	<li><a class="nav" href="vmen.html">Varsity Men</a></li>
 	<li><a class="nav" href="vwomen.html">Varsity Women</a></li>

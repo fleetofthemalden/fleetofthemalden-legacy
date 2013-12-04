@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Today</title>
+</head>
+<body>
+
+<script>
+var cal = localStorage['cal'];
+if(cal === undefined){
+	document.location = "index.html";
+}
+else{
+	document.location = "todays_wkt_" + cal + ".html";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calendar</title>
+</head>
+<body>
+
+<script>
+var cal = localStorage['cal'];
+if(cal === undefined){
+	document.location = "index.html";
+}
+else{
+	document.location = cal + ".html";
+}
+</script>
+
+</body>
+</html>
