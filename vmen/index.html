@@ -3,38 +3,39 @@
 <html>
 
 <head>
-<title>Calendars</title>
+<title>vmen</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel='shortcut icon' href='../images/favicon.ico' type='image/x-icon'>
 <link rel='apple-touch-icon' href='../images/apple-touch-icon.png' type='image/x-icon'>
 <link media="print, screen and (min-device-width: 700px)" href="../css/default_fleet.css" rel="stylesheet" />
 <link media="only screen and (max-device-width: 700px)" href="../css/mobile.css" rel="stylesheet" />
-<script src="../js/prefs.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://www.parsecdn.com/js/parse-1.2.13.min.js"></script>
+<script src="../js/team.js"></script>
 </head>
 <body>
 <div id="body_div">
-<h1>Calendars</h1>
+<h1>Varsity Men</h1>
 <div class="mid_div" id="nav_bar">
 <table><tr>
 <td>&nbsp;<a class="nav" href="../index.html">Home</a>&nbsp;|</td>
 <td>&nbsp;<a class="nav" href="../dergs/splits.html">ergs</a>&nbsp;|</td>
-<td>&nbsp;<a class="nav" href="../team.html">Team</a>&nbsp;|</td>
-<td>&nbsp;<a class="nav" href="todays_wkt.html">Today</a>&nbsp;</td>
+<td>&nbsp;<a class="nav" href="../cal/vmen.html">Cal</a>&nbsp;|</td>
+<td>&nbsp;<a class="nav" href="../cal/todays_wkt_vmen.html">Today</a>&nbsp;|</td>
+<td>&nbsp;<a class="nav" href="../links.html">Links</a>&nbsp;</td>
 </tr></table>
 </div>
 <div id="main">
-<form>
-Preferred Calendar:
-<select id="cal" onchange="updateData('cal')">
-	<option value="6969">SELECT</option>
-	<option value="vmen">vmen</option>
-	<option value="vwomen">vwomen</option>
-</select>
-</form>
+<h3 id='cal-data' data-cal='vmen'>Lifts:</h3>
 <ul>
-	<li><a class="nav" href="vmen.html">Varsity Men</a></li>
-	<li><a class="nav" href="vwomen.html">Varsity Women</a></li>
+	<li><a href="lifts/a.html">Lift A</a></li>
+	<li><a href="lifts/b.html">Lift B</a></li>
+	<li><a href="lifts/c.html">Lift C</a></li>
 </ul>
+<div id='file_list'>
+<h3>Files:</h3>
+Retrieving... Please wait.
+</div>
 </div>
 </div>
 

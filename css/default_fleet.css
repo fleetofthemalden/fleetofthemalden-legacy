@@ -123,7 +123,7 @@ h4{
 div.clicked{
 	padding: 5px;
 	margin: 0px;
-	border: 1px;
+	border: 1px solid #FFFFD6;
 	border-top-right-radius: 15px;
 	border-bottom-left-radius: 15px;
 	border-bottom-right-radius: 15px;
