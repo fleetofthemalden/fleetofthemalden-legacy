@@ -1,6 +1,6 @@
 fleetofthemalden.com
 
-Last updated December 4, 2013
+Last updated December 6, 2013
 __________________________
 
 Executive Developer:
@@ -22,13 +22,11 @@ ____________________________
 
 ToDo List:
 
--add authentication to upload page
 -fix reps display on workouts
 -check validity of benchmark calculations
 -Fix bugs with custom workouts
 -modify calendar page to allow users to go to specific day
 -add time to calendar
--modify upload page to allow any type of file to be uploaded
 -modify add page to allow linking of files...though technically this can already be done
 -improve overall authentication
 -Phase 4
@@ -78,8 +76,9 @@ _
 
 Phase 5: Completed!
 
-Create an interface to allow users to submit their own custom workouts.
+Create an interface to allow users to submit their own custom workouts (completed October 2013)
 5.1: add ability to set raced based on 2k +/- n seconds.
+5.1: add ability to upload and view team files (completed December 2013)
 
 Launched October 2013
 _

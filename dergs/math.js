@@ -35,6 +35,9 @@ function timify(secs){
 }
 
 function detimify(time){
+	if(time === undefined){
+		return 0;
+	}
 	var secs = time.split(':');
 	return parseInt(secs[0])*60 + parseInt(secs[1]);
 }
