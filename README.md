@@ -1,6 +1,6 @@
 fleetofthemalden.com
 
-Last updated December 6, 2013
+Last updated January 22, 2014
 __________________________
 
 Executive Developer:
@@ -22,13 +22,13 @@ ____________________________
 
 ToDo List:
 
--fix reps display on workouts
 -check validity of benchmark calculations
 -Fix bugs with custom workouts
--modify calendar page to allow users to go to specific day
--add time to calendar
+-modify calendar page to allow users to go to specific day, week
 -modify add page to allow linking of files...though technically this can already be done
--improve overall authentication
+-increase security on upload page
+-add ability for users to change passwords
+-handle backdoor server routes
 -Phase 4
 ____________________________
 
@@ -61,13 +61,14 @@ Phase 3: Completed!
 
 Create a calendar view with linked workouts for each team. (Completed September 2013)
 Create an interface to allow captains to add/delete workouts to the calendar. (Completed September 2013)
-Make secure login for captains for add/delete page. (semi-secure)
+Make secure login for captains for add/delete page. (Completed January 2014)
 Update database to include all information. (completed October 2013)
+3.1: add ability to change password
 
 Launched October 2013
 _
 
-Phase 4: Expected December 2013
+Phase 4: Expected March 2014
 
 Implement a feedback system to allow users to rate the difficulty of the workout. (completed October 2013)
 Server necessary to handle requests is already implemented.
@@ -85,6 +86,15 @@ _
 
 Phase 6: Expected Spring/Summer 2014
 
+Add secure user profiles
+-remember target2k
+-log workouts
+-associate userid with ratings
+
+_
+
+Phase 7: Expected Spring/Summer 2014
+
 Develop iOS app that implements all existing features of fleetofthemalden.com
 Future expansion of iOS application:
 -Enable ability to sync iOS device with concept2 ergometer to instantly enter pre-set workouts
@@ -92,7 +102,7 @@ Future expansion of iOS application:
 	concept2.com and/or tuftscrew.org/tuftsoarsmen.org
 _
 
-Phase 7: TBD
+Phase 8: TBD
 
 Scale and potentially monetize website/iOS app resources to be available to rowing programs worldwide
 
