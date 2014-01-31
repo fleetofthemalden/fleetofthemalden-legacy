@@ -31,7 +31,7 @@ function update(){
 
 function liftUpdate(team){
 	var liftExpiry = localStorage['LiftExpiry'];
-	if(liftExpiry === undefined || liftExpiry < new Date()){
+	if(liftExpiry === undefined || new Date(liftExpiry) < new Date()){
 	
 	var qry = "Q1fxzT6hPv";
   	if(team == "vwomen"){
@@ -45,7 +45,7 @@ function liftUpdate(team){
     		localStorage['LiftB'] = liftRef.get("b");
     		localStorage['LiftC'] = liftRef.get("c");
     		localStorage['LiftExpiry'] = new Date(liftRef.updatedAt.getTime() + 1814400000);
-    		//TEST = liftRef;
+    		TEST = liftRef;
   		},
   		error: function(object, error) {
   			alert("Error: " + error.code + " " + error.message);
