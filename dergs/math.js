@@ -30,6 +30,9 @@ function timify(secs){
 		if(s < 10){
 			s = 0 + s.toString();
 		}
+		else if(s > 59){
+			return (Math.floor(secs/60) + 1) + ":00";
+		}
 		return Math.floor(secs/60) + ":" + s;
 	}
 }
