@@ -22,6 +22,7 @@ ____________________________
 
 ToDo List:
 
+-Make everything server side, for security purposes, NEVER EVER TRUST USER INPUT
 -check validity of benchmark calculations
 -Fix bugs with custom workouts
 -modify calendar page to allow users to go to specific day, week
