@@ -31,6 +31,9 @@ ToDo List:
 -add ability for users to change passwords
 -handle backdoor server routes
 -Phase 4
+-Create Raceday page
+-create lineups visualization
+-rower information
 ____________________________
 
 Development Timeline

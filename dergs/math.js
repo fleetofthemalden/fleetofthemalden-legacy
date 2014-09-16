@@ -88,6 +88,12 @@ function parse() {
 		else{
 			wkt = workout[0];
 			wkt.Interval_work = new Array();
+			if(wkt.Interval == null){
+				wkt.Interval = wkt['Interval[]'];
+			}
+			if(wkt.Rate == null){
+				wkt.Rate = wkt['Rate[]'];
+			}
 			if(wkt.type == "time"){
 				wkt.atype = "Meters"
 				work_it = distancer;
