@@ -1,38 +1,53 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-<title>Calendar</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel='shortcut icon' href='../images/favicon.ico' type='image/x-icon'>
 <link rel='apple-touch-icon' href='../images/apple-touch-icon.png' type='image/x-icon'>
 <link media="print, screen and (min-device-width: 700px)" href="../css/default_fleet.css" rel="stylesheet" />
 <link media="only screen and (max-device-width: 700px)" href="../css/mobile.css" rel="stylesheet" />
-<link rel="stylesheet" href="calendar.css" media="screen">
+<script src="../quotes.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
 </head>
-<body onload="getWorkouts('vwomen')">
+<body>
 <div id="body_div">
-<h1>VWomen Training</h1>
+<h1>Race Day/h1>
 <div class="mid_div" id="nav_bar">
 <table><tr>
 <td>&nbsp;<a class="nav" href="../index.html">Home</a>&nbsp;|</td>
 <td>&nbsp;<a class="nav" href="../dergs/splits.html">ergs</a>&nbsp;|</td>
-<td>&nbsp;<a class="nav" href="index.html">Calendars</a>&nbsp;|</td>
-<td>&nbsp;<a class="nav" href="todays_wkt_vwomen.html">Today</a>&nbsp;|</td>
-<td>&nbsp;<a class="nav" href="../links.html">Links</a>&nbsp;</td>
+<td>&nbsp;<a class="nav" href="../todays_wkt.html">Today</a>&nbsp;</td>
 </tr></table>
 </div>
 <div class="mid_div nav_bar" id="nav_bar">
 	this site is under construction, <a href="http://app.fleetofthemalden.com">CLICK HERE</a> to visit fleetofthemalden 2.0
 </div>
-<div class="mid_div" id="caldiv">
-<script src="calendar.js"></script>
-</div>
-<div id="main">
+
+<div class='main_div'>
+
+	<script>
+	var qry = "http://fleetofthemalden.herokuapp.com/wideAwake";
+	$.get(qry, function (response){
+		console.log(response);
+	});
+	</script>
+
+
+<div id="race_div">
+<div class='loading centered'>
+	<h2>Loading...</h2>
+	<img src='images/rowingLoading.gif'>
 </div>
 </div>
 
+</div>
+
+<div id='main'>
+<p class="centered">~<br /><I id="quote"></I><br />~</p>
+</div>
+<p class="centered">contact: <a href="mailto:info@fleetofthemalden.com">info@fleetofthemalden.com</a></p><br />
+</div>
+
+
 </body>
+</html>
