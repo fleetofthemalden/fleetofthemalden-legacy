@@ -53,12 +53,14 @@ function parse() {
     bid = text[0].split('?')[1];
     var qry = "http://fleetofthemalden.herokuapp.com/ergs.json" + text[0];
     TEST = qry;
-	$.get(qry, function (workout){
+	// $.get(qry, function (workout){ // DM debug
+		var workout = ['meow']; // DM debug
 		if(workout.length == 0){
 			alert("No workout data found");
 		}
 		else{
-			wkt = workout[0];
+			// wkt = workout[0]; // DM debug
+			wkt = {"type":"distance","name":"1000 m","Interval":["250","250","250","250"],"Rate":["28","28","28","28"],"Percent2k":["0.952","0.952","0.952","0.952"],"bid":4,"pid":"","_id":{"$oid":"54249d6e280f058555f5cda2"}}
 			wkt.Interval_work = new Array();
 			if(wkt.Interval == null){
 				wkt.Interval = wkt['Interval[]']
@@ -79,7 +81,7 @@ function parse() {
 			}
 			render();
 		}
-	});
+	// }); // DM debug
 }
 
 function render(){
